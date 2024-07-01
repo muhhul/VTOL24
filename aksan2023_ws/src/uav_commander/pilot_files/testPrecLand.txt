@@ -1,0 +1,11 @@
+indoorInitialize; m;
+//switchMode; m 1 strings GUIDED;
+//armThrottle; m;
+//takeoff; m 1 doubles 2.0;
+//wait; m 1 doubles 1.0;
+//movingCV; m;
+//wait; m 1 doubles 1.0; 
+//setPointPosition; m 7 doubles 1528 2.5 0.0 0.0 0.0 0.0 0.0; // x dan y
+//wait; m 1 doubles 10.0;
+precLand; m 1 bools true;
+//change precLand to false so it doesn't landfalse

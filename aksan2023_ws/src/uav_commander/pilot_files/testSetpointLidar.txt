@@ -1,0 +1,5 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+setPointLidar; m;

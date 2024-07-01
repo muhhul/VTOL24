@@ -1,0 +1,22 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 3.0;
+
+indoorGoTo; m 1 strings C;
+goToDZ; m 1 strings C;
+dropPayload; m 1 ints 11;
+wait; m 1 doubles 2.0;
+
+indoorGoTo; m 1 strings B;
+goToDZ; m 1 strings B;
+dropPayload; m 1 ints 10;
+wait; m 1 doubles 2.0;
+
+//indoorGoTo; m 1 strings A;
+//goToDZ; m 1 strings A;
+//dropPayload; m 1 ints 9;
+//wait; m 1 doubles 2.0;
+
+goToELP; m 2 ints 5 2;
+precLand; m 1 bools true;

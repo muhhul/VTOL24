@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='VTOL3'>
+    <link name='link'>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+        <pose>0 0 0 0 -0 0</pose>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+      <pose>0.309741 1.35591 1.4279 0 -0 0</pose>
+      <gravity>0</gravity>
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.21 0.01 0.21</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://VTOL3/materials/scripts/model.material</uri>
+<!--            <uri>model://VTOL3/materials/textures</uri>-->
+            <name>Texture3</name>
+          </script>
+        </material>
+        <pose>0 0 0 0 -0 0</pose>
+        <transparency>0</transparency>
+        <cast_shadows>1</cast_shadows>
+      </visual>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

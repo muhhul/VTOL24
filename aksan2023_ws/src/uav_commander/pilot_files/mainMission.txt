@@ -1,0 +1,9 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+//indoorGoTo; m 3 doubles 4.0 5.5 2.0;
+//wait; m 1 doubles 5.0;
+mainMission; m;
+goToELP; m 2 ints 3 3;
+precLand; m 1 bools true;

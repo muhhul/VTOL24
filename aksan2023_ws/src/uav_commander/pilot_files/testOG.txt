@@ -1,0 +1,27 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+wait; m 1 doubles 2.0;
+heading; m 1 doubles 337.8;// 0.0 = utara || 270.0 = timur
+//setPointPosition; m 7 doubles 1528 0.0 0.0 20.0 0.0 0.0 0.0; // x dan y
+//wait; m 1 doubles 7.0; 
+wait; m 1 doubles 2.0;
+//setPointPosition; m 7 doubles 1528 1.6 0.0 0.0 0.0 0.0 0.0; // x dan y
+//precLand; m 1 bools true;
+//wait; m 1 doubles 3.0;
+//chargeOpengrab; m 1 bools true;
+//wait; m 1 doubles 5.0;
+//switchMode; m 1 strings GUIDED;
+//armThrottle; m;
+//takeoff; m 1 doubles 1.0;
+//wait; m 1 doubles 1.5;
+//heading; m 1 doubles 337.9;// 0.0 = utara || 270.0 = timur
+//neutralOpengrab; m 1 bools true;
+//wait; m 1 doubles 1.0;
+movingPL; m 1 doubles 2.0;//1.0 = kiri, 2.0 = kanan
+loiterDZ; m 1 bools true;
+//dischargeOpengrab; m 1 bools true;
+wait; m 1 doubles 5.0;
+neutralOpengrab; m 1 bools true;
+//wait; m 1 doubles 2.0;

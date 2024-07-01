@@ -1,0 +1,7 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 3.0;
+testWASD; m;
+land; m;
+

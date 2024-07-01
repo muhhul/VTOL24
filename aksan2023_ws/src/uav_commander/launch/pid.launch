@@ -1,0 +1,70 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+ 	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+ 	
+ 	<group ns="pid">
+
+		<node pkg="pid" ns="vel_x_long" type="controller" name="pid_velxl" output="screen" >
+			<param name="Kp" value="0.30" />
+			<param name="Ki" value="0.00" />
+			<param name="Kd" value="0.24" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>		
+
+		<node pkg="pid" ns="vel_y_long" type="controller" name="pid_velyl" output="screen" >
+			<param name="Kp" value="0.30" />
+			<param name="Ki" value="0.00" />
+			<param name="Kd" value="0.24" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>
+
+		<node pkg="pid" ns="vel_z_long" type="controller" name="pid_velzl" output="screen" >
+			<param name="Kp" value="0.2" />
+			<param name="Ki" value="0.0" />
+			<param name="Kd" value="0.0" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>
+		
+		<node pkg="pid" ns="vel_x_short" type="controller" name="pid_velxs" output="screen" >
+			<param name="Kp" value="0.5" />
+			<param name="Ki" value="0.0" />
+			<param name="Kd" value="0.0" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>		
+
+		<node pkg="pid" ns="vel_y_short" type="controller" name="pid_velys" output="screen" >
+			<param name="Kp" value="0.5" />
+			<param name="Ki" value="0.0" />
+			<param name="Kd" value="0.0" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>
+		
+		<node pkg="pid" ns="vel_z_short" type="controller" name="pid_velzs" output="screen" >
+			<param name="Kp" value="0.3" />
+			<param name="Ki" value="0.0" />
+			<param name="Kd" value="0.0" />
+			<param name="windup_limit" value="0.5" />
+			<param name="upper_limit" value="1.0" />
+			<param name="lower_limit" value="-1.0" />
+			<param name="setpoint_timeout" value="0.1" />
+		</node>
+				
+	</group>		
+
+</launch>

@@ -1,0 +1,120 @@
+/* vim: set ft=cpp: */
+// LAIN KALI PAKE ROS PARAMETER SERVER AJAH
+
+// Misi
+double  GEDUNG_A_X          -3.0
+double  GEDUNG_A_Y          6.0
+double  PRECISE_A_Y         4.0
+double  PRECISE_A_Z         2.0
+
+double  GEDUNG_B_X          0.0
+double  GEDUNG_B_Y          6.7
+double  PRECISE_B_Y         3.3
+double  PRECISE_B_Z         1.0
+
+double  GEDUNG_C_X          4.0
+double  GEDUNG_C_Y          5.7
+double  PRECISE_C_Y         4.3
+double  PRECISE_C_Z         2.0
+
+int     GEDUNG_B_ORD        1  // CCW dari kanan bawah
+
+double  MISSION_ALT         3.0
+double  SCAN_ELP_ALT        3.0
+double  PRECLAND_WAIT_TIME  2.0
+double  ARENA_MAX_Y         10.0  // numpang disini
+
+
+// ROUGH TOLERANCE VALS
+double  ROUGH_X_TOL         0.15
+double  ROUGH_Y_TOL         0.15
+double  ROUGH_Z_TOL         0.20
+double  ROUGHER_ADD         0.10
+
+
+// PRECISE TOLERANCE VALS
+double  PREC_X_TOL          0.05
+double  PREC_Y_TOL          0.05
+double  PREC_Z_TOL          0.05
+
+
+// DZ offsets from gedung
+double  DZ_A_OFF_Y          -1.0
+double  DZ_A_OFF_Z          0.2
+double  DZ_C_OFF_Y          -1.0
+double  DZ_C_OFF_Z          1.0
+double  DZ_B_OFF_1Y         -1.0
+double  DZ_B_OFF_1Z         1.0
+double  DZ_B_OFF_2Y         -0.5
+double  DZ_B_OFF_2Z         1.0
+double  DZ_B_OFF_3Y         -0.5
+double  DZ_B_OFF_3Z         1.0
+double  DZ_B_OFF_4Y         -1.0
+double  DZ_B_OFF_4Z         1.0
+
+
+// VERSIONINGS
+int     TAKEOFF_VER         2   // 1 yang asli
+string  TOL_ALT_SRC         rangefinder  // TOL = TO & Landing
+string  GOTO_DZ_METHOD      velocity  // [position, velocity]
+string  INDOORGOTO_METHOD   velocity
+int     GOTODZ_VER          1
+bool    GUIDED_WITH_VEL     true
+
+
+// TUNING
+// SETPOINT POSITION
+double  GOTO_RETRY_DUR      3.5
+double  GOTO_RETRY_SHORT    1.0
+double  GOTO_CHKMOVE_IF     0.5
+double  MOVE_VEL_TOL        0.20
+double  MOVE_VELANG_TOL     0.20
+// TAKEOFF
+double  TAKEOFF_RETRY_DUR   2.0
+// PRECISIONING (POSITION)
+int     PRECDZ_MAX_ITER     10
+// SETPOINT VEL
+double  PID_MAX_VEL_X_SHORT 0.5
+double  PID_MAX_VEL_Y_SHORT 0.8
+double  PID_MAX_VEL_Z_SHORT 0.8
+double  PID_MAX_VEL_X_LONG  2.0
+double  PID_MAX_VEL_Y_LONG  2.0
+double  PID_MAX_VEL_Z_LONG  1.0
+// PRECISIONING (VELOCITY)
+double  POSITIONING_WAIT    0.1
+double  GLOB_Z_OFFSET       0.6
+int     LONG_VEL_RATE       20
+int     SHORT_VEL_RATE      8
+// SETPOINT TAKEOFF
+double  TAKEOFF_MAX_THRUST  0.8
+double  TAKEOFF_MIN_THRUST  0.5
+double  SEND_VEL_Z_WHEN     -1  // negative or 0.0 ~ 0.2
+
+
+// Payload
+int     LOAD_PAYLOAD_PWM    2200
+int     DROP_PAYLOAD_PWM    1100
+int     SERVO_A             9
+int     SERVO_B             10
+int     SERVO_C             11
+
+
+// TIMEOUTS
+double  WAIT_MSG_TIMEOUT    1.0
+double  WAIT_MSG_TO_LONG    1.5
+double  WAIT_SUB_TIMEOUT    2.0  // Used in waitAndPublish()
+double  ENV_MSG_TIMEOUT     1.0
+
+
+// Infrequent
+bool    RIGID_MOVE          true  // in indoorGoTo
+string  FS_METHOD           LAND_SERV
+int     SERVICE_RETRY_N     5
+double  SERVICE_RETRY_DUR   1.0
+int     ENV_RETRY_N         3
+double  ENV_RETRY_DUR       1.0
+double  ENV_SAFETY_SLEEP    0.5  // Time gap antara panggil service dan mulai dapat message
+
+string  RF_DEPAN_SRC        /gazebo_things/rf_depan
+string  RF_BAWAH_SRC        /gazebo_things/rf_bawah
+string  RF_ATAS_SRC         /gazebo_things/rf_atas

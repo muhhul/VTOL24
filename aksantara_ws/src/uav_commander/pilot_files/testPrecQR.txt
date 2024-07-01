@@ -1,0 +1,4 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+precQR; m;
+land; m;

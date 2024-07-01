@@ -1,0 +1,11 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 2.0;
+//setpointTakeoff; m 1 doubles 1.5;
+//indoorGoTo; m 2 doubles -2.0 1.0;
+//indoorGoTo; m 2 doubles 0.0 0.0;
+testVelocityGoTo; m 2 bools false false;
+wait; m 1 doubles 10.0;
+testVelocityGoTo; m 2 bools true true;
+land; m;

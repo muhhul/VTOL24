@@ -1,0 +1,11 @@
+indoorInitialize; m;
+//switchMode; m 1 strings GUIDED;
+//armThrottle; m;
+//takeoff; m 1 doubles 2.0;
+//wait; m 1 doubles 2.0;
+//setPointPosition; m 7 doubles 1528 1.5 0.0 0.0 0.0 0.0 0.0; // x dan y
+//wait; m 1 doubles 5.0;
+//testWASD; m;
+//goToELP; m 2 ints 3 3;
+loiterDZ; m 1 bools true;
+//change precLand to false so it doesn't land

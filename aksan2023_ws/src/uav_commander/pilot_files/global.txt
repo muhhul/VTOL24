@@ -1,0 +1,13 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+//chargeOpengrab; m 1 bools true;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+wait; m 1 doubles 3.0;
+calculateNewPosition; m 5 doubles 1.0 1.0 -4.4894511 105.2486661 110.6; // mode1/2  ||   alt  ||  homelat  ||  homelon  ||  homeheading 1=kiri 2=kanan ||  ganti for loop dan array size ||  1 maju 2 kotak
+wait; m 1 doubles 3.0;
+land; m;
+//calculateNewPosition; m 5 doubles 1.0 5.0 -35.3632633 149.1652377 1.32; //mode1/2  ||   alt  ||  homelat  ||  homelon  ||  homeheading 1=kiri 2=kanan
+//setPointGlobal; m 5 doubles 507 -35.3632621 149.1652374 2.0 3.14159; //1.5708 3.14159 4.71239
+//heading; m 2 doubles 2.9583331 1.0;
+//calculateNewPosition; m 5 doubles 1.0 5.0 -35.3632633 149.1652377 1.32; //mode1/2  ||   alt  ||  homelat  ||  homelon  ||  homeheading 1=kiri 2=kanan

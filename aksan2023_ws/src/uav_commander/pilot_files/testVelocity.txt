@@ -1,0 +1,14 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+wait; m 1 doubles 3.0;
+//setPointLidar; m;
+setPointPosition; m 7 doubles 1528 5.5 0.0 0.0 0.0 0.0 0.0; // x dan y
+wait; m 1 doubles 15.0;
+setPointPosition; m 7 doubles 1528 0.0 5.0 0.0 0.0 0.0 0.0; // x dan y
+wait; m 1 doubles 15.0; 
+//setPointPosition; m 2 doubles 5.5 0.0; // x dan y
+//setPointPosition; m 2 doubles 0.0 4.5; // x dan y
+//wait; m 1 doubles 6.0; 
+land; m;

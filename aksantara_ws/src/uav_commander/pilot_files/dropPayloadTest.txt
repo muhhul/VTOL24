@@ -1,0 +1,4 @@
+indoorInitialize; m;
+dropPayload; m 1 ints 11;
+dropPayload; m 1 ints 12; 
+dropPayload; m 1 ints 13; 

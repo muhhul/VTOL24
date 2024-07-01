@@ -1,0 +1,11 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+indoorGoTo; m 1 doubles 3.0;
+wait; m 1 doubles 2.0;
+indoorGoTo; m 2 doubles 0.0 2.0;
+wait; m 1 doubles 2.0;
+indoorGoTo; m 2 doubles 2.0 2.0;
+wait; m 1 doubles 2.0
+land; m;

@@ -1,0 +1,37 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+	<arg name="pilot_filename" default="testWASD.txt" />
+	<arg name="config_filename" default="uav_config.txt" />
+	
+	
+	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+<!--	<env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time:%H:%M:%S}]: ${message}" />-->
+
+
+<!--	<include file="$(find vision_to_mavros)/launch/t265_tf_to_mavros.launch"></include>  -->
+    
+  
+<!--  <node-->
+<!--    pkg="env_percept"-->
+<!--    type="img_percept_node"-->
+<!--    name="img_percept"-->
+<!--    respawn="true"-->
+<!--    output="screen"-->
+<!--  />-->
+
+<!--DOUBLE CHECK this node name with checkPilot func in safety_node.cpp-->
+<!--NEVER MAKE THIS NODE RESPAWN ITSELF. It will conflict with failsafe mechanism-->
+  <node name="pilot_node" pkg="uav_commander" type="pilot_node" args="$(find uav_commander)/pilot_files/$(arg pilot_filename) $(find uav_commander)/config/$(arg config_filename)" output="screen" respawn="true" />
+  
+  <node name="safety_node" pkg="uav_commander" type="safety_node" output="screen" /> 
+
+	<node
+	  pkg="uav_teleop"
+	  type="keyboard"
+	  name="keyboard"
+	  respawn="true"
+	  output="screen"
+	/>
+
+</launch>

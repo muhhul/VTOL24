@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  
+  <arg name="world_filename" default="worlds/vtol2021.world" />
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_filename)"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/> <!-- Inert - see gazebo_ros_pkgs issue #491 -->
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+<!--  <node name="spawn_iris" pkg="gazebo_ros" type="spawn_model" args="-sdf -file /home/sulaii/.gazebo/models/iris_with_standoffs_demo/model.sdf -model iris_vtol21" />-->
+<!--  <node name="tf_rs_link" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 logitech_link rs_link 30" />-->
+<!--  <node name="tf_logitech_link" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map logitech_link 30" />-->
+</launch>

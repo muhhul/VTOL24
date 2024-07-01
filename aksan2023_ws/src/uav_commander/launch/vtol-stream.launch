@@ -1,0 +1,34 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+
+	<!-- image view params -->
+	<arg name="front_cam_viz" default="false" />
+	<arg name="down_cam_viz" default="true" />
+	<arg name="fisheye_viz" default="false" />
+	<arg name="fisheye_mana" default="1" />    <!-- 1 atau 2 -->
+	<arg name="image_transport" default="compressed" />
+	
+	
+	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+<!--	<env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time:%H:%M:%S}]: ${message}" />-->
+
+	
+	<node if="$(arg down_cam_viz)" name="down_cam_image" pkg="image_view" type="image_view" output="screen">
+	  <remap from="image" to="/image_percept/down_image/output_video" />
+	  <param name="image_transport" value="$(arg image_transport)" />
+	</node>
+
+	
+	<node if="$(arg front_cam_viz)" name="front_cam_image" pkg="image_view" type="image_view" output="screen">
+	  <remap from="image" to="/image_percept/front_image/output_video" />
+	  <param name="image_transport" value="$(arg image_transport)" />
+	</node>
+	
+	
+  <node if="$(arg fisheye_viz)" name="fisheye_image" pkg="image_view" type="image_view" output="screen">
+    <remap from="image" to="/realsense/fisheye$(arg fisheye_mana)/image_raw" />
+	  <param name="image_transport" value="$(arg image_transport)" />
+  </node>
+
+</launch>

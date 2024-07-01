@@ -1,0 +1,7 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.5;
+setPointPosition; m 7 doubles 1528 5.0 0.0 0.0 0.0 0.0 0.0; // x dan y
+wait; m 1 doubles 7.0;
+setPointPosition; m 7 doubles 1528 5.0 5.0 0.0 0.0 0.0 0.0; // x dan y

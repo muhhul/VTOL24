@@ -1,0 +1,6 @@
+string name
+---
+bool scanELP
+bool scanDZ
+bool scanQRPos
+bool scanDistX

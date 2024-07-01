@@ -1,0 +1,17 @@
+// For testing new functions
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 2.0;
+//indoorGoTo; m 7 doubles 0.0 0.0 3.0 0.0 0.0 -0.7 -0.7;
+
+indoorGoTo; m 1 strings A;
+//wait; m 1 doubles 2.0;
+goToDZ; m 1 strings A;
+dropPayload; m 1 ints 9;
+wait; m 1 doubles 2.0;
+
+indoorGoTo; m 2 doubles -3.0 5.1;
+land; m;
+
+//precLand; m 1 bools false;

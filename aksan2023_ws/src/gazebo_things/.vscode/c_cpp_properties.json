@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/sulaii/aksan/vtol21/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/sulaii/aksan/vtol21/src/gazebo_things/include/**",
+        "/home/sulaii/aksan/vtol21/src/uav_commander/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

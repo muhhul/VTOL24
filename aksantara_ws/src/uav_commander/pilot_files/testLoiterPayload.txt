@@ -1,0 +1,3 @@
+indoorInitialize; m;
+loiterDZ; m 1 strings B1;
+dropPayload; m 1 ints 11;

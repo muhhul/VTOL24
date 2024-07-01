@@ -1,0 +1,8 @@
+prefix=/home/vtol2022/aksantara_ws/install
+
+Name: uav_commander
+Description: Description of uav_commander
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -luav_missions_utils -luav_missions -lpilot
+Requires: 

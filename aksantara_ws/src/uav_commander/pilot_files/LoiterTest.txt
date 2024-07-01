@@ -1,0 +1,7 @@
+indoorInitialize; m;
+//switchMode; m 1 strings GUIDED;
+//armThrottle; m;
+//takeoff; m 1 doubles 2.0;
+//testWASD; m;
+//goToELP; m 2 ints 3 3;
+loiterDZ; m 1 strings A;

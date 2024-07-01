@@ -1,0 +1,3 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+dischargeOpengrab; m;

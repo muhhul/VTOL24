@@ -1,0 +1,15 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node" output="screen">
+    <param name="serial_port" type="string" value="/dev/ttyUSB0" />
+    <param name="baud_rate" type="int" value="115200" />
+  </node>
+
+  <node pkg="tfmini_ros" type="tfmini_node_asli" name="tfmini_node_asli" output="screen" respawn="true">
+    <param name="serial_port" type="string" value="/dev/ttyUSB0" />
+    <param name="baud_rate" type="int" value="115200" />
+  </node>
+  
+<!--  <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini" args="0 0 0 0 0 0 base_link TFmini 100" /> -->
+</launch>

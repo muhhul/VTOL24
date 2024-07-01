@@ -1,0 +1,8 @@
+prefix=/home/vtol2022/aksantara_ws/install
+
+Name: env_percept
+Description: Description of env_percept
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lenv_percept
+Requires: roscpp sensor_msgs std_msgs mavros_msgs uav_msgs geometry_msgs

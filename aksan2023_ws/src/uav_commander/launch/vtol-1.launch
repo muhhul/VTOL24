@@ -1,0 +1,48 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+	<arg name="rs_enable_fisheye1" default="false" />
+	<arg name="rs_enable_fisheye2" default="false" />
+
+  <!--mavros params-->
+  <arg name="fcu_url" default="/dev/ttyACM0:921600" />
+  <arg name="gcs_url" default="udp://0.0.0.0:14555@192.168.0.253:14550" />
+  <arg name="tgt_system" default="1" />
+  <arg name="tgt_component" default="1" />
+  <arg name="log_output" default="screen" />
+  <arg name="fcu_protocol" default="v2.0" />
+  <arg name="respawn_mavros" default="true" />		<!-- penting -->
+ 
+  
+ 	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+<!--	<env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time:%H:%M:%S}]: ${message}" />-->
+
+	<!-- <param name="realsense/tracking_module/frames_queue_size" value="16" />
+	<include file="$(find realsense2_camera)/launch/rs_t265.launch" >
+		<arg name="camera" value="realsense" />
+		<arg name="enable_fisheye1" value="$(arg rs_enable_fisheye1)" />
+		<arg name="enable_fisheye2" value="$(arg rs_enable_fisheye2)" />		<param name="tracking_module/frames_queue_size" value="16" />
+                <arg name="map_in" value="/home/odroid/udah.bin" />
+	</include>   -->
+
+  
+  <include file="$(find mavros)/launch/node.launch">
+    <arg name="pluginlists_yaml" value="$(find uav_commander)/config/apm_pluginlists.yaml" />
+    <arg name="config_yaml" value="$(find uav_commander)/config/apm_config.yaml" />
+
+    <arg name="fcu_url" value="$(arg fcu_url)" />
+    <arg name="gcs_url" value="$(arg gcs_url)" />
+    <arg name="tgt_system" value="$(arg tgt_system)" />
+    <arg name="tgt_component" value="$(arg tgt_component)" />
+    <arg name="log_output" value="$(arg log_output)" />
+    <arg name="fcu_protocol" value="$(arg fcu_protocol)" />
+    <arg name="respawn_mavros" default="$(arg respawn_mavros)" />
+  </include>
+
+  <!-- <node pkg="uav_commander" type="vision_to_mavros" name="vision_to_mavros" output="log" respawn="true"/> -->
+
+<!--  <include file="$(find vision_to_mavros)/launch/t265_tf_to_mavros.launch" /> -->
+
+<!--  <include file="$(find tfmini_ros)/launch/tfmini.launch" /> -->
+
+</launch>

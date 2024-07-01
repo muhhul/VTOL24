@@ -1,0 +1,8 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+ 	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
+
+	<node pkg="uav_commander" type="vision_to_mavros" name="vision_to_mavros" output="screen" /> 
+
+</launch>

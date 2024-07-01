@@ -1,0 +1,28 @@
+indoorInitialize; m;
+switchMode; m 1 strings GUIDED;
+armThrottle; m;
+takeoff; m 1 doubles 1.0;
+// All position
+indoorGoTo; m 3 doubles 0.0 0.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 0.0 -1.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 1.0 -1.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 1.0 -1.0 1.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 1.0 1.0 1.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 1.0 1.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles -1.0 1.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles -1.0 1.0 1.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles -1.0 -1.0 1.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles -1.0 -1.0 2.0;
+wait; m 1 doubles 1.0;
+indoorGoTo; m 3 doubles 0.0 0.0 2.0;
+wait; m 1 doubles 3.0;
+land; m;

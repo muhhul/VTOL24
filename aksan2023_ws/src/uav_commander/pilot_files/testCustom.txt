@@ -1,0 +1,14 @@
+indoorInitialize; m;
+//switchMode; m 1 strings GUIDED;
+//armThrottle; m;
+//takeoff; m 1 doubles 1.0;
+//indoorGoTo; m 7 doubles 0.0 0.0 3.0 0.0 0.0 -0.7 -0.7;
+//indoorGoTo; m 1 strings A;
+//indoorGoTo; m 3 doubles -1.34 6.00 3.0;
+//wait; m 1 doubles 2.0;
+//indoorGoTo; m 3 doubles 0.0 0.0 3.0;
+//land; m;
+//indoorGoTo; m 7 doubles 0.0 0.0 3.0 0.0 0.0 -0.7 -0.7;
+goToDZ; m 1 strings A;
+//testVelocityGoTo; m;
+dropPayload; m 1 ints 10;
