@@ -67,15 +67,25 @@ Once connected, you can navigate the filesystem, manage files, run programs, and
 
 Common Commands
 List directory contents: ```ls```
+
 Change directory: ```cd <directory>```
+
 Print working directory: ```pwd```
+
 Copy files: ```cp <source> <destination>```
+
 Move/rename files: ```mv <source> <destination>```
+
 Remove files: ```rm <file>```
+
 Create directory: ```mkdir <directory>```
+
 Edit files: ```nano <file> or vim <file>```
+
 Update packages: ```sudo apt update```
+
 Upgrade packages: ```sudo apt upgrade```
+
 Manage services: ```sudo systemctl <command>```
 
 ### 7. Exiting SSH
