@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/pilot_node"
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/pilot_node.pdb"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/uav_commander/pilot_node"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/uav_commander/pilot_node.pdb"
   "CMakeFiles/pilot_node.dir/src/uav_commander/pilot_node.cpp.o"
+  "CMakeFiles/pilot_node.dir/src/uav_commander/pilot_node.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

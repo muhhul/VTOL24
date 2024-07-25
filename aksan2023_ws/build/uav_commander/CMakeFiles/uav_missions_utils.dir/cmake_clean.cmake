@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/libuav_missions_utils.pdb"
-  "/home/vtol2022/aksan2023_ws/devel/lib/libuav_missions_utils.so"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/libuav_missions_utils.pdb"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/libuav_missions_utils.so"
   "CMakeFiles/uav_missions_utils.dir/src/uav_commander/uav_missions_utils.cpp.o"
+  "CMakeFiles/uav_missions_utils.dir/src/uav_commander/uav_missions_utils.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

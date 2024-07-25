@@ -1,8 +1,8 @@
-# Install script for directory: /home/vtol2022/aksan2023_ws/src/gazebo_things
+# Install script for directory: /home/karol/Aksantara/VTOL24/aksan2023_ws/src/gazebo_things
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vtol2022/aksan2023_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/karol/Aksantara/VTOL24/aksan2023_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,22 +37,27 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vtol2022/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_things.pc")
+# Set path to fallback-tool for dependency-resolution.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_things.pc")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_things/cmake" TYPE FILE FILES
-    "/home/vtol2022/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_thingsConfig.cmake"
-    "/home/vtol2022/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_thingsConfig-version.cmake"
+    "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_thingsConfig.cmake"
+    "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/gazebo_things/catkin_generated/installspace/gazebo_thingsConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_things" TYPE FILE FILES "/home/vtol2022/aksan2023_ws/src/gazebo_things/package.xml")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_things" TYPE FILE FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/gazebo_things/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gazebo_things" TYPE DIRECTORY FILES "/home/vtol2022/aksan2023_ws/src/gazebo_things/include/gazebo_things/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gazebo_things" TYPE DIRECTORY FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/gazebo_things/include/gazebo_things/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
 endif()
 

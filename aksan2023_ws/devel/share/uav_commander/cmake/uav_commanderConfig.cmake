@@ -67,14 +67,14 @@ set(uav_commander_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(uav_commander_SOURCE_PREFIX /home/vtol2022/aksan2023_ws/src/uav_commander)
-  set(uav_commander_DEVEL_PREFIX /home/vtol2022/aksan2023_ws/devel)
+  set(uav_commander_SOURCE_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander)
+  set(uav_commander_DEVEL_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/devel)
   set(uav_commander_INSTALL_PREFIX "")
   set(uav_commander_PREFIX ${uav_commander_DEVEL_PREFIX})
 else()
   set(uav_commander_SOURCE_PREFIX "")
   set(uav_commander_DEVEL_PREFIX "")
-  set(uav_commander_INSTALL_PREFIX /home/vtol2022/aksan2023_ws/install)
+  set(uav_commander_INSTALL_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/install)
   set(uav_commander_PREFIX ${uav_commander_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(uav_commander_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/vtol2022/aksan2023_ws/src/uav_commander/include;/home/vtol2022/aksan2023_ws/src/uav_commander/src " STREQUAL " ")
+if(NOT "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander/include;/home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander/src " STREQUAL " ")
   set(uav_commander_INCLUDE_DIRS "")
-  set(_include_dirs "/home/vtol2022/aksan2023_ws/src/uav_commander/include;/home/vtol2022/aksan2023_ws/src/uav_commander/src")
+  set(_include_dirs "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander/include;/home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander/src")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/vtol2022/aksan2023_ws/src/uav_commander/include;/home/vtol2022/aks
         message(FATAL_ERROR "Project 'uav_commander' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'uav_commander' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/vtol2022/aksan2023_ws/src/uav_commander/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'uav_commander' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/karol/Aksantara/VTOL24/aksan2023_ws/src/uav_commander/${idir}'.  ${_report}")
     endif()
     _list_append_unique(uav_commander_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/vtol2022/aksan2023_ws/devel/lib;/home/vtol2022/aksantara_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib;/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib;/home/karol/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

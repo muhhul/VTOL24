@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
 
         //Test TOpic
     if (!nh.hasParam("test_topic"))
-        nh.setParam("test_topic", "/mavros/distance_sensor/rangefinder_sub");
+        nh.setParam("test_topic", "/mavros/distance_sensor/rangefinder_pub");
     if (!nh.hasParam("atas_topic"))
         nh.setParam("atas_topic", "/gazebo_things/rf_atas");
 

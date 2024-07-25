@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/include/image_view/ImageViewConfig.h"
-  "/home/vtol2022/aksan2023_ws/devel/lib/python3/dist-packages/image_view/cfg/ImageViewConfig.py"
-  "/home/vtol2022/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig-usage.dox"
-  "/home/vtol2022/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig.dox"
-  "/home/vtol2022/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig.wikidoc"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/include/image_view/ImageViewConfig.h"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/python3/dist-packages/image_view/cfg/ImageViewConfig.py"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig-usage.dox"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig.dox"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/image_view/docs/ImageViewConfig.wikidoc"
   "CMakeFiles/image_view_gencfg"
 )
 

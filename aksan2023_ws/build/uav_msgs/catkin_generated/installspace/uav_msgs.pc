@@ -1,4 +1,4 @@
-prefix=/home/vtol2022/aksan2023_ws/install
+prefix=/home/karol/Aksantara/VTOL24/aksan2023_ws/install
 
 Name: uav_msgs
 Description: Description of uav_msgs

@@ -573,20 +573,21 @@ int indoorInitialize(const uav_msgs::MissionParams &m, ros::NodeHandle &nh)
     double currentWP_lat;
     double currentWP_lon;
     double currentWP_heading;
-    
+
     boost::function<void(const sensor_msgs::NavSatFix &)> globalPositionCallback = [&] (const sensor_msgs::NavSatFix &msg){
         currentWP_lat = msg.latitude;
         currentWP_lon = msg.longitude;
         GPSFound = true;        
     };
-    
+
     boost::function<void(const std_msgs::Float64 &)> compassHdgCallback = [&] (const std_msgs::Float64 &msg){
         currentWP_heading = msg.data;
         Heading = true;
     };
-    
+
     ros::Subscriber global_position_sub = nh.subscribe<sensor_msgs::NavSatFix>("/mavros/global_position/global", 1, globalPositionCallback);
     ros::Subscriber compass_subscriber = nh.subscribe<std_msgs::Float64>("/mavros/global_position/compass_hdg", 1, compassHdgCallback);
+
 	while (!GPSFound && !Heading) {	
         ros::spinOnce();   
     }

@@ -1,4 +1,4 @@
-prefix=/home/vtol2022/aksan2023_ws/devel
+prefix=/home/karol/Aksantara/VTOL24/aksan2023_ws/devel
 
 Name: vision_to_mavros
 Description: Description of vision_to_mavros

@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/vtol2022/aksan2023_ws/src'
+source_root_dir = '/home/karol/Aksantara/VTOL24/aksan2023_ws/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/vtol2022/aksantara_ws/devel;/opt/ros/noetic'.split(';') if '/home/vtol2022/aksantara_ws/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/karol/Aksantara/VTOL24/aksan2023_ws/devel;/home/karol/catkin_ws/devel;/opt/ros/noetic'.split(';') if '/home/karol/Aksantara/VTOL24/aksan2023_ws/devel;/home/karol/catkin_ws/devel;/opt/ros/noetic' != '' else []

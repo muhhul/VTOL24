@@ -1,0 +1,3 @@
+/home/karol/Aksantara/VTOL24/eksperimen_opencv/build/CMakeFiles/eksperimen_opencv.dir
+/home/karol/Aksantara/VTOL24/eksperimen_opencv/build/CMakeFiles/edit_cache.dir
+/home/karol/Aksantara/VTOL24/eksperimen_opencv/build/CMakeFiles/rebuild_cache.dir

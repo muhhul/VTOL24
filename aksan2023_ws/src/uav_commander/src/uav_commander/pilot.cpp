@@ -195,18 +195,21 @@ namespace uav_commander{
 		ROS_WARN("---Altigen Kresnala in action---");
 		ros::ServiceClient fsClient = nh_.serviceClient<uav_msgs::PilotOverride>("/uav_safety/pilot_override");
 		uav_msgs::PilotOverride srv;
-
+		
 		ros::Publisher currentPub = nh_.advertise<std_msgs::Int32>("/uav_commander/current", 1, false);
 		std_msgs::Int32 currentNoMsg;
+
 		boost::function<void(const ros::TimerEvent &ev)> timerCb = 
 		[&] (const ros::TimerEvent &ev) {
 			currentNoMsg.data = currentNo;
 			currentPub.publish(currentNoMsg);
 		};
+
 		ros::Timer timer = nh_.createTimer(ros::Duration(0.1), timerCb);
 		ros::AsyncSpinner spinner(1);
-		spinner.start();
 
+		spinner.start();
+		
 		while (ros::ok())
 		{
 			if (!missionList.empty())

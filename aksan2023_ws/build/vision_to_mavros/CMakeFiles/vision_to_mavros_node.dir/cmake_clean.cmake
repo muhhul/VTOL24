@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node"
-  "/home/vtol2022/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node.pdb"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node.pdb"
   "CMakeFiles/vision_to_mavros_node.dir/src/vision_to_mavros.cpp.o"
+  "CMakeFiles/vision_to_mavros_node.dir/src/vision_to_mavros.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

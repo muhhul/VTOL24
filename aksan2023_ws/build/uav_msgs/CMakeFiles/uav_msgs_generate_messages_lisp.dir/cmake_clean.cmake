@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/DzPosition.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/MissionParams.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/PrecLand.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/PrecLoit.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/DetectObject.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/DetectQR.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/PilotOverride.lisp"
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/SetCurrent.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/DzPosition.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/MissionParams.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/PrecLand.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/msg/PrecLoit.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/DetectObject.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/DetectQR.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/PilotOverride.lisp"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_msgs/srv/SetCurrent.lisp"
   "CMakeFiles/uav_msgs_generate_messages_lisp"
 )
 

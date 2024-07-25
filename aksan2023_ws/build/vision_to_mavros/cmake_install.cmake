@@ -1,8 +1,8 @@
-# Install script for directory: /home/vtol2022/aksan2023_ws/src/vision_to_mavros
+# Install script for directory: /home/karol/Aksantara/VTOL24/aksan2023_ws/src/vision_to_mavros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vtol2022/aksan2023_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/karol/Aksantara/VTOL24/aksan2023_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,29 +37,34 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vtol2022/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavros.pc")
+# Set path to fallback-tool for dependency-resolution.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavros.pc")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vision_to_mavros/cmake" TYPE FILE FILES
-    "/home/vtol2022/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavrosConfig.cmake"
-    "/home/vtol2022/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavrosConfig-version.cmake"
+    "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavrosConfig.cmake"
+    "/home/karol/Aksantara/VTOL24/aksan2023_ws/build/vision_to_mavros/catkin_generated/installspace/vision_to_mavrosConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vision_to_mavros" TYPE FILE FILES "/home/vtol2022/aksan2023_ws/src/vision_to_mavros/package.xml")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vision_to_mavros" TYPE FILE FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/vision_to_mavros/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros/vision_to_mavros_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros/vision_to_mavros_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros/vision_to_mavros_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros" TYPE EXECUTABLE FILES "/home/vtol2022/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros" TYPE EXECUTABLE FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/vision_to_mavros/vision_to_mavros_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros/vision_to_mavros_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/vision_to_mavros/vision_to_mavros_node")
     file(RPATH_CHANGE
@@ -72,7 +77,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vision_to_mavros" TYPE DIRECTORY FILES "/home/vtol2022/aksan2023_ws/src/vision_to_mavros/launch")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vision_to_mavros" TYPE DIRECTORY FILES "/home/karol/Aksantara/VTOL24/aksan2023_ws/src/vision_to_mavros/launch")
 endif()
 

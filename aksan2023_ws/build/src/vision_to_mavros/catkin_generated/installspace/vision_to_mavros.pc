@@ -1,8 +1,0 @@
-prefix=/home/vtol2022/aksan2023_ws/install
-
-Name: vision_to_mavros
-Description: Description of vision_to_mavros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

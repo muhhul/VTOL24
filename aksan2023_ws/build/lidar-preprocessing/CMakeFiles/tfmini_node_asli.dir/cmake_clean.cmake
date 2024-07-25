@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/tfmini_ros/tfmini_node_asli"
-  "/home/vtol2022/aksan2023_ws/devel/lib/tfmini_ros/tfmini_node_asli.pdb"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/tfmini_ros/tfmini_node_asli"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib/tfmini_ros/tfmini_node_asli.pdb"
   "CMakeFiles/tfmini_node_asli.dir/src/TFmini.cpp.o"
+  "CMakeFiles/tfmini_node_asli.dir/src/TFmini.cpp.o.d"
   "CMakeFiles/tfmini_node_asli.dir/src/TFmini_node_asli.cpp.o"
+  "CMakeFiles/tfmini_node_asli.dir/src/TFmini_node_asli.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

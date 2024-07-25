@@ -1,8 +1,8 @@
-prefix=/home/vtol2022/aksan2023_ws/devel
+prefix=/home/karol/Aksantara/VTOL24/aksan2023_ws/devel
 
 Name: video_stream_opencv
 Description: Description of video_stream_opencv
 Version: 1.1.5
-Cflags: -I/home/vtol2022/aksan2023_ws/devel/include
+Cflags: -I/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

@@ -1,8 +1,8 @@
-prefix=/home/vtol2022/aksan2023_ws/devel
+prefix=/home/karol/Aksantara/VTOL24/aksan2023_ws/devel
 
 Name: gazebo_things
 Description: Description of gazebo_things
 Version: 0.0.0
-Cflags: -I/home/vtol2022/aksan2023_ws/src/gazebo_things/include
+Cflags: -I/home/karol/Aksantara/VTOL24/aksan2023_ws/src/gazebo_things/include
 Libs: -L${prefix}/lib 
 Requires: 

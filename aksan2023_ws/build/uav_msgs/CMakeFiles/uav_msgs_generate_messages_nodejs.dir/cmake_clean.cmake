@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js"
-  "/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js"
+  "/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js"
   "CMakeFiles/uav_msgs_generate_messages_nodejs"
 )
 

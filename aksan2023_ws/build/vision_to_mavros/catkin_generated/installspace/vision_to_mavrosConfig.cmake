@@ -67,14 +67,14 @@ set(vision_to_mavros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(vision_to_mavros_SOURCE_PREFIX /home/vtol2022/aksan2023_ws/src/vision_to_mavros)
-  set(vision_to_mavros_DEVEL_PREFIX /home/vtol2022/aksan2023_ws/devel)
+  set(vision_to_mavros_SOURCE_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/src/vision_to_mavros)
+  set(vision_to_mavros_DEVEL_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/devel)
   set(vision_to_mavros_INSTALL_PREFIX "")
   set(vision_to_mavros_PREFIX ${vision_to_mavros_DEVEL_PREFIX})
 else()
   set(vision_to_mavros_SOURCE_PREFIX "")
   set(vision_to_mavros_DEVEL_PREFIX "")
-  set(vision_to_mavros_INSTALL_PREFIX /home/vtol2022/aksan2023_ws/install)
+  set(vision_to_mavros_INSTALL_PREFIX /home/karol/Aksantara/VTOL24/aksan2023_ws/install)
   set(vision_to_mavros_PREFIX ${vision_to_mavros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/vtol2022/aksan2023_ws/install/lib;/home/vtol2022/aksantara_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/karol/Aksantara/VTOL24/aksan2023_ws/install/lib;/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/lib;/home/karol/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

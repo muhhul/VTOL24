@@ -1,8 +1,8 @@
-prefix=/home/vtol2022/aksan2023_ws/devel
+prefix=/home/karol/Aksantara/VTOL24/aksan2023_ws/devel
 
 Name: uav_teleop
 Description: Description of uav_teleop
 Version: 0.1.1
-Cflags: -I/home/vtol2022/aksan2023_ws/devel/include
+Cflags: -I/home/karol/Aksantara/VTOL24/aksan2023_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: roscpp std_msgs message_runtime
