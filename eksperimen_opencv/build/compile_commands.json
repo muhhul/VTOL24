@@ -10,5 +10,17 @@
   "command": "/usr/lib/ccache/c++ -I/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection -isystem /usr/include/opencv4 -g -o CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.o -c /home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection/gate_detection.cpp",
   "file": "/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection/gate_detection.cpp",
   "output": "CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.o"
+},
+{
+  "directory": "/home/karol/Aksantara/VTOL24/eksperimen_opencv/build",
+  "command": "/usr/lib/ccache/c++ -I/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection -isystem /usr/include/opencv4 -g -o CMakeFiles/segmentation_experimenting.dir/segmentation_experimenting.cpp.o -c /home/karol/Aksantara/VTOL24/eksperimen_opencv/segmentation_experimenting.cpp",
+  "file": "/home/karol/Aksantara/VTOL24/eksperimen_opencv/segmentation_experimenting.cpp",
+  "output": "CMakeFiles/segmentation_experimenting.dir/segmentation_experimenting.cpp.o"
+},
+{
+  "directory": "/home/karol/Aksantara/VTOL24/eksperimen_opencv/build",
+  "command": "/usr/lib/ccache/c++ -I/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection -isystem /usr/include/opencv4 -g -o CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.o -c /home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection/gate_detection.cpp",
+  "file": "/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection/gate_detection.cpp",
+  "output": "CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.o"
 }
 ]

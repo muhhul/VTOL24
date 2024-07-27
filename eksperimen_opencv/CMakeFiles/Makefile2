@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/karol/Aksantara/VTOL24/eksperimen_opencv
 
 # The main recursive "all" target.
 all: CMakeFiles/eksperimen_opencv.dir/all
+all: CMakeFiles/segmentation_experimenting.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/eksperimen_opencv.dir/clean
+clean: CMakeFiles/segmentation_experimenting.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ eksperimen_opencv: CMakeFiles/eksperimen_opencv.dir/rule
 CMakeFiles/eksperimen_opencv.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/clean
 .PHONY : CMakeFiles/eksperimen_opencv.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/segmentation_experimenting.dir
+
+# All Build rule for target.
+CMakeFiles/segmentation_experimenting.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles --progress-num=4,5,6 "Built target segmentation_experimenting"
+.PHONY : CMakeFiles/segmentation_experimenting.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/segmentation_experimenting.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/segmentation_experimenting.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles 0
+.PHONY : CMakeFiles/segmentation_experimenting.dir/rule
+
+# Convenience name for target.
+segmentation_experimenting: CMakeFiles/segmentation_experimenting.dir/rule
+.PHONY : segmentation_experimenting
+
+# clean rule for target.
+CMakeFiles/segmentation_experimenting.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/clean
+.PHONY : CMakeFiles/segmentation_experimenting.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

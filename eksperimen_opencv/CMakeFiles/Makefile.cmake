@@ -51,4 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/eksperimen_opencv.dir/DependInfo.cmake"
+  "CMakeFiles/segmentation_experimenting.dir/DependInfo.cmake"
   )

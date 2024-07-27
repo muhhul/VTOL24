@@ -141,4 +141,143 @@ void keyboard_input(int fps, bool &playing)
     } 
 }
 
+void stackAndShowImages(const std::vector<cv::Mat>& images, int windowWidth, int windowHeight, int imagesPerRow, int imagesPerColumn) {
+    if (images.empty()) {
+        std::cerr << "No images to display." << std::endl;
+        return;
+    }
+
+    int canvasType = images[0].type();
+    int singleImageWidth = windowWidth / imagesPerRow;
+    int singleImageHeight = windowHeight / imagesPerColumn;
+
+    // Create a blank canvas
+    cv::Mat canvas(windowHeight, windowWidth, images[0].type(), cv::Scalar::all(0));
+
+    // Resize and place images on the canvas
+    for (size_t i = 0; i < images.size(); ++i) {
+        if (i >= imagesPerRow * imagesPerColumn) break;
+
+        int rowIndex = i / imagesPerRow;
+        int colIndex = i % imagesPerRow;
+
+        cv::Rect roi(cv::Point(colIndex * singleImageWidth, rowIndex * singleImageHeight), cv::Size(singleImageWidth, singleImageHeight));
+        cv::Mat resizedImage;
+        cv::resize(images[i], resizedImage, roi.size());
+
+        // Convert the image to the same type as the canvas if needed
+        if (resizedImage.type() != canvasType) {
+            cv::cvtColor(resizedImage, resizedImage, resizedImage.channels() == 1 ? cv::COLOR_GRAY2BGR : cv::COLOR_BGR2GRAY);
+        }
+        
+        resizedImage.copyTo(canvas(roi));
+    }
+
+    // Display the stacked images
+    cv::imshow("Stacked Images", canvas);
+}
+
+void scaleSaturation(cv::Mat& image, double scale) {
+    // Convert the image from BGR to HSV
+    cv::Mat hsv;
+    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
+
+    // Split the HSV channels
+    std::vector<cv::Mat> hsvChannels;
+    cv::split(hsv, hsvChannels);
+
+    // Increase the saturation channel
+    hsvChannels[1] = hsvChannels[1] * scale;
+
+    // Ensure the values are within the valid range [0, 255]
+    cv::min(hsvChannels[1], 255, hsvChannels[1]);
+
+    // Merge the HSV channels back
+    cv::merge(hsvChannels, hsv);
+
+    // Convert the image back from HSV to BGR
+    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
+}
+
+void scaleValue(cv::Mat& image, double scale) {
+    // Convert the image from BGR to HSV
+    cv::Mat hsv;
+    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
+
+    // Split the HSV channels
+    std::vector<cv::Mat> hsvChannels;
+    cv::split(hsv, hsvChannels);
+
+    // Increase the saturation channel
+    hsvChannels[2] = hsvChannels[2] * scale;
+
+    // Ensure the values are within the valid range [0, 255]
+    cv::min(hsvChannels[2], 255, hsvChannels[2]);
+
+    // Merge the HSV channels back
+    cv::merge(hsvChannels, hsv);
+
+    // Convert the image back from HSV to BGR
+    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
+}
+
+void scaleVibrance(cv::Mat& image, double scale) {
+    // Convert the image from BGR to HSV
+    cv::Mat hsv;
+    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
+
+    // Split the HSV channels
+    std::vector<cv::Mat> hsvChannels;
+    cv::split(hsv, hsvChannels);
+
+    // Adjust the saturation channel
+    for (int i = 0; i < hsvChannels[1].rows; ++i) {
+        for (int j = 0; j < hsvChannels[1].cols; ++j) {
+            uchar& hue = hsvChannels[0].at<uchar>(i, j);
+            uchar& sat = hsvChannels[1].at<uchar>(i, j);
+
+            // Decrease vibrance more for higher saturation values
+            double newSat = sat * (1.0 - (sat / 255.0) * (1.0 - scale));
+            sat = static_cast<uchar>(cv::saturate_cast<uchar>(newSat));
+        }
+    }
+
+    // Merge the HSV channels back
+    cv::merge(hsvChannels, hsv);
+
+    // Convert the image back from HSV to BGR
+    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
+}
+
+void scaleVibranceRedBounded(cv::Mat& image, double scale, int redBoundLeft, int redBoundRight) {
+    // Convert the image from BGR to HSV
+    cv::Mat hsv;
+    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
+
+    // Split the HSV channels
+    std::vector<cv::Mat> hsvChannels;
+    cv::split(hsv, hsvChannels);
+
+    // Adjust the saturation channel
+    for (int i = 0; i < hsvChannels[1].rows; ++i) {
+        for (int j = 0; j < hsvChannels[1].cols; ++j) {
+            uchar& hue = hsvChannels[0].at<uchar>(i, j);
+            uchar& sat = hsvChannels[1].at<uchar>(i, j);
+
+            // Check if the pixel is in the orange hue range
+            if (hue < redBoundLeft || hue > redBoundRight) {
+                // Decrease vibrance more for higher saturation values
+                double newSat = sat * (1.0 - (sat / 255.0) * (1.0 - scale));
+                sat = static_cast<uchar>(cv::saturate_cast<uchar>(newSat));
+            }
+        }
+    }
+
+    // Merge the HSV channels back
+    cv::merge(hsvChannels, hsv);
+
+    // Convert the image back from HSV to BGR
+    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
+}
+
 }

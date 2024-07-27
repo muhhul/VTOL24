@@ -129,6 +129,19 @@ eksperimen_opencv/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/build
 .PHONY : eksperimen_opencv/fast
 
+#=============================================================================
+# Target rules for targets named segmentation_experimenting
+
+# Build rule for target.
+segmentation_experimenting: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 segmentation_experimenting
+.PHONY : segmentation_experimenting
+
+# fast build rule for target.
+segmentation_experimenting/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/build
+.PHONY : segmentation_experimenting/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,12 +166,37 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+segmentation_experimenting.o: segmentation_experimenting.cpp.o
+.PHONY : segmentation_experimenting.o
+
+# target to build an object file
+segmentation_experimenting.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/segmentation_experimenting.cpp.o
+.PHONY : segmentation_experimenting.cpp.o
+
+segmentation_experimenting.i: segmentation_experimenting.cpp.i
+.PHONY : segmentation_experimenting.i
+
+# target to preprocess a source file
+segmentation_experimenting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/segmentation_experimenting.cpp.i
+.PHONY : segmentation_experimenting.cpp.i
+
+segmentation_experimenting.s: segmentation_experimenting.cpp.s
+.PHONY : segmentation_experimenting.s
+
+# target to generate assembly for a file
+segmentation_experimenting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/segmentation_experimenting.cpp.s
+.PHONY : segmentation_experimenting.cpp.s
+
 src/gate_detection/gate_detection.o: src/gate_detection/gate_detection.cpp.o
 .PHONY : src/gate_detection/gate_detection.o
 
 # target to build an object file
 src/gate_detection/gate_detection.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.o
 .PHONY : src/gate_detection/gate_detection.cpp.o
 
 src/gate_detection/gate_detection.i: src/gate_detection/gate_detection.cpp.i
@@ -167,6 +205,7 @@ src/gate_detection/gate_detection.i: src/gate_detection/gate_detection.cpp.i
 # target to preprocess a source file
 src/gate_detection/gate_detection.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.i
 .PHONY : src/gate_detection/gate_detection.cpp.i
 
 src/gate_detection/gate_detection.s: src/gate_detection/gate_detection.cpp.s
@@ -175,6 +214,7 @@ src/gate_detection/gate_detection.s: src/gate_detection/gate_detection.cpp.s
 # target to generate assembly for a file
 src/gate_detection/gate_detection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.s
 .PHONY : src/gate_detection/gate_detection.cpp.s
 
 # Help Target
@@ -186,9 +226,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... eksperimen_opencv"
+	@echo "... segmentation_experimenting"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... segmentation_experimenting.o"
+	@echo "... segmentation_experimenting.i"
+	@echo "... segmentation_experimenting.s"
 	@echo "... src/gate_detection/gate_detection.o"
 	@echo "... src/gate_detection/gate_detection.i"
 	@echo "... src/gate_detection/gate_detection.s"

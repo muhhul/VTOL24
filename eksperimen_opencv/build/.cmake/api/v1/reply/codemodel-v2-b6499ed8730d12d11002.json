@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "eksperimen_opencv",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "eksperimen_opencv::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-eksperimen_opencv-Debug-735464cc49f76a125c4f.json",
+					"jsonFile" : "target-eksperimen_opencv-Debug-a8a359a5d4aeb457ff19.json",
 					"name" : "eksperimen_opencv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "segmentation_experimenting::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-segmentation_experimenting-Debug-fd62d9237d009c70e919.json",
+					"name" : "segmentation_experimenting",
 					"projectIndex" : 0
 				}
 			]

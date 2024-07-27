@@ -13,4 +13,10 @@ add_executable(eksperimen_opencv
     src/gate_detection/gate_detection.cpp
     )
 
+add_executable(segmentation_experimenting 
+    segmentation_experimenting.cpp
+    src/gate_detection/gate_detection.cpp
+    )
+
 target_link_libraries( eksperimen_opencv ${OpenCV_LIBS} )
+target_link_libraries( segmentation_experimenting ${OpenCV_LIBS} )

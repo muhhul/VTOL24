@@ -23,6 +23,11 @@ void gate_align_normal          (cv::Mat img, cv::Point rectCentroid);
 void gate_align_yaw             (cv::Mat img, cv::Point rectCentroid);
 void gate_align_lateral         (cv::Mat img, std::vector<cv::Point> rectangle);
 void keyboard_input             (int fps, bool &playing);
+void stackAndShowImages         (const std::vector<cv::Mat>& images, int windowWidth, int windowHeight, int imagesPerRow, int imagesPerColumn);
+void scaleSaturation            (cv::Mat& image, double scale);
+void scaleValue                 (cv::Mat& image, double scale);
+void scaleVibrance              (cv::Mat& image, double scale);
+void scaleVibranceRedBounded    (cv::Mat& image, double scale, int redBoundLeft = 10, int redBoundRight = 185);
 
 }
 
