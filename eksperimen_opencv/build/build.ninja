@@ -120,6 +120,46 @@ build segmentation_experimenting: CXX_EXECUTABLE_LINKER__segmentation_experiment
   TARGET_FILE = segmentation_experimenting
   TARGET_PDB = segmentation_experimenting.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target luminance_analysis
+
+
+#############################################
+# Order-only phony target for luminance_analysis
+
+build cmake_object_order_depends_target_luminance_analysis: phony || .
+
+build CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.o: CXX_COMPILER__luminance_analysis_unscanned_Debug /home/karol/Aksantara/VTOL24/eksperimen_opencv/luminance_analysis.cpp || cmake_object_order_depends_target_luminance_analysis
+  DEP_FILE = CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection -isystem /usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/luminance_analysis.dir
+  OBJECT_FILE_DIR = CMakeFiles/luminance_analysis.dir
+
+build CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.o: CXX_COMPILER__luminance_analysis_unscanned_Debug /home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection/gate_detection.cpp || cmake_object_order_depends_target_luminance_analysis
+  DEP_FILE = CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/karol/Aksantara/VTOL24/eksperimen_opencv/src/gate_detection -isystem /usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/luminance_analysis.dir
+  OBJECT_FILE_DIR = CMakeFiles/luminance_analysis.dir/src/gate_detection
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target luminance_analysis
+
+
+#############################################
+# Link the executable luminance_analysis
+
+build luminance_analysis: CXX_EXECUTABLE_LINKER__luminance_analysis_Debug CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.o CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.o | /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_face.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_text.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_video.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
+  FLAGS = -g
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_face.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_text.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_video.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
+  OBJECT_DIR = CMakeFiles/luminance_analysis.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = luminance_analysis
+  TARGET_PDB = luminance_analysis.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -154,7 +194,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/karol/Aksantara/VTOL24/eksperimen_opencv/build
 
-build all: phony eksperimen_opencv segmentation_experimenting
+build all: phony eksperimen_opencv segmentation_experimenting luminance_analysis
 
 # =============================================================================
 # Built-in targets

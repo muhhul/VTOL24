@@ -142,6 +142,43 @@ segmentation_experimenting/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/build
 .PHONY : segmentation_experimenting/fast
 
+#=============================================================================
+# Target rules for targets named luminance_analysis
+
+# Build rule for target.
+luminance_analysis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 luminance_analysis
+.PHONY : luminance_analysis
+
+# fast build rule for target.
+luminance_analysis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/build
+.PHONY : luminance_analysis/fast
+
+luminance_analysis.o: luminance_analysis.cpp.o
+.PHONY : luminance_analysis.o
+
+# target to build an object file
+luminance_analysis.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.o
+.PHONY : luminance_analysis.cpp.o
+
+luminance_analysis.i: luminance_analysis.cpp.i
+.PHONY : luminance_analysis.i
+
+# target to preprocess a source file
+luminance_analysis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.i
+.PHONY : luminance_analysis.cpp.i
+
+luminance_analysis.s: luminance_analysis.cpp.s
+.PHONY : luminance_analysis.s
+
+# target to generate assembly for a file
+luminance_analysis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/luminance_analysis.cpp.s
+.PHONY : luminance_analysis.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -197,6 +234,7 @@ src/gate_detection/gate_detection.o: src/gate_detection/gate_detection.cpp.o
 src/gate_detection/gate_detection.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.o
 .PHONY : src/gate_detection/gate_detection.cpp.o
 
 src/gate_detection/gate_detection.i: src/gate_detection/gate_detection.cpp.i
@@ -206,6 +244,7 @@ src/gate_detection/gate_detection.i: src/gate_detection/gate_detection.cpp.i
 src/gate_detection/gate_detection.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.i
 .PHONY : src/gate_detection/gate_detection.cpp.i
 
 src/gate_detection/gate_detection.s: src/gate_detection/gate_detection.cpp.s
@@ -215,6 +254,7 @@ src/gate_detection/gate_detection.s: src/gate_detection/gate_detection.cpp.s
 src/gate_detection/gate_detection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eksperimen_opencv.dir/build.make CMakeFiles/eksperimen_opencv.dir/src/gate_detection/gate_detection.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/segmentation_experimenting.dir/build.make CMakeFiles/segmentation_experimenting.dir/src/gate_detection/gate_detection.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/luminance_analysis.dir/build.make CMakeFiles/luminance_analysis.dir/src/gate_detection/gate_detection.cpp.s
 .PHONY : src/gate_detection/gate_detection.cpp.s
 
 # Help Target
@@ -226,7 +266,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... eksperimen_opencv"
+	@echo "... luminance_analysis"
 	@echo "... segmentation_experimenting"
+	@echo "... luminance_analysis.o"
+	@echo "... luminance_analysis.i"
+	@echo "... luminance_analysis.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

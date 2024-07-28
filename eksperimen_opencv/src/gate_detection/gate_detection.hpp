@@ -29,6 +29,20 @@ void scaleValue                 (cv::Mat& image, double scale);
 void scaleVibrance              (cv::Mat& image, double scale);
 void scaleVibranceRedBounded    (cv::Mat& image, double scale, int redBoundLeft = 10, int redBoundRight = 185);
 
+double find_width               (std::vector<cv::Point> rect);
+double calculate_distance       (double width_in_frame);
+void show_distance              (std::vector<cv::Point> rect);
+
+enum LightingCondition {
+    MINIMAL_LIGHTING,
+    NORMAL_LIGHTING,
+    BRIGHT_LIGHTING
+};
+
+double meanValueChannel                         (const cv::Mat& img);
+LightingCondition determineLightingCondition    (const cv::Mat& img);
+
+
 }
 
 #endif

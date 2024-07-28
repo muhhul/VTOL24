@@ -1,4 +1,5 @@
 /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles/eksperimen_opencv.dir
 /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles/segmentation_experimenting.dir
+/home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles/luminance_analysis.dir
 /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles/edit_cache.dir
 /home/karol/Aksantara/VTOL24/eksperimen_opencv/CMakeFiles/rebuild_cache.dir

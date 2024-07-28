@@ -33,81 +33,6 @@ void onChange_Canny(int, void*) {
     cv::imshow("Edges Image", edges);
 }
 
-void scaleSaturation(cv::Mat& image, double scale) {
-    // Convert the image from BGR to HSV
-    cv::Mat hsv;
-    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
-
-    // Split the HSV channels
-    std::vector<cv::Mat> hsvChannels;
-    cv::split(hsv, hsvChannels);
-
-    // Increase the saturation channel
-    hsvChannels[1] = hsvChannels[1] * scale;
-
-    // Ensure the values are within the valid range [0, 255]
-    cv::min(hsvChannels[1], 255, hsvChannels[1]);
-
-    // Merge the HSV channels back
-    cv::merge(hsvChannels, hsv);
-
-    // Convert the image back from HSV to BGR
-    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
-}
-
-void scaleValue(cv::Mat& image, double scale) {
-    // Convert the image from BGR to HSV
-    cv::Mat hsv;
-    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
-
-    // Split the HSV channels
-    std::vector<cv::Mat> hsvChannels;
-    cv::split(hsv, hsvChannels);
-
-    // Increase the saturation channel
-    hsvChannels[2] = hsvChannels[2] * scale;
-
-    // Ensure the values are within the valid range [0, 255]
-    cv::min(hsvChannels[2], 255, hsvChannels[2]);
-
-    // Merge the HSV channels back
-    cv::merge(hsvChannels, hsv);
-
-    // Convert the image back from HSV to BGR
-    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
-}
-
-void scaleVibrance(cv::Mat& image, double scale, int redBoundLeft = 10, int redBoundRight = 185) {
-    // Convert the image from BGR to HSV
-    cv::Mat hsv;
-    cv::cvtColor(image, hsv, cv::COLOR_BGR2HSV);
-
-    // Split the HSV channels
-    std::vector<cv::Mat> hsvChannels;
-    cv::split(hsv, hsvChannels);
-
-    // Adjust the saturation channel
-    for (int i = 0; i < hsvChannels[1].rows; ++i) {
-        for (int j = 0; j < hsvChannels[1].cols; ++j) {
-            uchar& hue = hsvChannels[0].at<uchar>(i, j);
-            uchar& sat = hsvChannels[1].at<uchar>(i, j);
-
-            // Check if the pixel is in the orange hue range
-            if (hue < redBoundLeft || hue > redBoundRight) {
-                // Decrease vibrance more for higher saturation values
-                double newSat = sat * (1.0 - (sat / 255.0) * (1.0 - scale));
-                sat = static_cast<uchar>(cv::saturate_cast<uchar>(newSat));
-            }
-        }
-    }
-
-    // Merge the HSV channels back
-    cv::merge(hsvChannels, hsv);
-
-    // Convert the image back from HSV to BGR
-    cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
-}
-
 int main(int, char**){
     // Open video file
     cv::VideoCapture cap("assets/vid_wide_gate.mp4"); // Change to 0 for webcam or provide the path to your video file
@@ -170,11 +95,11 @@ int main(int, char**){
 
         // IMAGE PREPROCESSING
         double saturationScale = double(saturation) / 100;
-        scaleSaturation(img_resized, saturationScale);
+        gate_detection::scaleSaturation(img_resized, saturationScale);
         double valueScale = double(value) / 100;
-        scaleValue(img_resized, valueScale);
+        gate_detection::scaleValue(img_resized, valueScale);
         double vibranceScale = double(vibrance) / 100;
-        scaleVibrance(img_resized, vibranceScale, upper_h_l, lower_h_r);
+        gate_detection::scaleVibranceRedBounded(img_resized, vibranceScale, upper_h_l, lower_h_r);
         cv::GaussianBlur(img_resized, blurred, cv::Size(5, 5), 3);
         // cv::cvtColor(blurred, gray, cv::COLOR_BGR2GRAY);
         cv::imshow("Blur", blurred);

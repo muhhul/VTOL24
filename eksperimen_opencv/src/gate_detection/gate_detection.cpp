@@ -280,4 +280,63 @@ void scaleVibranceRedBounded(cv::Mat& image, double scale, int redBoundLeft, int
     cv::cvtColor(hsv, image, cv::COLOR_HSV2BGR);
 }
 
+const double focal_length = 3.2 / 10.0; // in cm
+const double actual_width = 170; // in cm
+
+double find_width(std::vector<cv::Point> rect){
+    std::vector<cv::Point> copy_rect = rect;
+    int first = min_point_y_idx(rect);
+    rect.erase(rect.begin() + first);
+    int second = min_point_y_idx(rect);
+    return abs(copy_rect[first].x - copy_rect[second].x);
+}
+
+double calculate_distance(double width_in_frame){
+    return actual_width * focal_length / width_in_frame;
+}
+
+void show_distance(std::vector<cv::Point> rect){
+    double distance = calculate_distance(find_width(rect));
+    std::cout << "Distance: " << distance << "\n";
+}
+
+double meanValueChannel(const cv::Mat& img) {
+    // Check if the image is empty
+    if (img.empty()) {
+        std::cerr << "Error: Image is empty!" << std::endl;
+        return -1.0; // Return an invalid value to indicate an error
+    }
+
+    // Convert the image to HSV color space
+    cv::Mat hsv;
+    cv::cvtColor(img, hsv, cv::COLOR_BGR2HSV);
+
+    // Split the HSV channels
+    std::vector<cv::Mat> hsv_channels;
+    cv::split(hsv, hsv_channels);
+    cv::Mat value_channel = hsv_channels[2]; // The Value channel
+
+    // Calculate the mean value of the Value channel
+    cv::Scalar mean_value = cv::mean(value_channel);
+
+    return mean_value[0]; // Return the mean value as a double
+}
+
+LightingCondition determineLightingCondition(const cv::Mat& img) {
+    // Calculate the mean brightness value
+    cv::Scalar mean_value = meanValueChannel(img);
+
+    // Define thresholds for different lighting conditions
+    double minimal_threshold = 50.0;
+    double bright_threshold = 200.0;
+
+    if (mean_value[0] < minimal_threshold) {
+        return MINIMAL_LIGHTING;
+    } else if (mean_value[0] > bright_threshold) {
+        return BRIGHT_LIGHTING;
+    } else {
+        return NORMAL_LIGHTING;
+    }
+}
+
 }

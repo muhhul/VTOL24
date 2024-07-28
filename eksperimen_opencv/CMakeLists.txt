@@ -18,5 +18,11 @@ add_executable(segmentation_experimenting
     src/gate_detection/gate_detection.cpp
     )
 
+add_executable(luminance_analysis 
+    luminance_analysis.cpp
+    src/gate_detection/gate_detection.cpp
+    )
+
 target_link_libraries( eksperimen_opencv ${OpenCV_LIBS} )
 target_link_libraries( segmentation_experimenting ${OpenCV_LIBS} )
+target_link_libraries( luminance_analysis ${OpenCV_LIBS} )

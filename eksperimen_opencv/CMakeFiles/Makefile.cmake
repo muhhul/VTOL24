@@ -52,4 +52,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/eksperimen_opencv.dir/DependInfo.cmake"
   "CMakeFiles/segmentation_experimenting.dir/DependInfo.cmake"
+  "CMakeFiles/luminance_analysis.dir/DependInfo.cmake"
   )
