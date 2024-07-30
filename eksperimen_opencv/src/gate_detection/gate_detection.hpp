@@ -16,7 +16,9 @@ int min_point_y_idx             (std::vector<cv::Point> points);
 
 cv::Point find_rect_centroid    (cv::Mat img, std::vector<cv::Point> largestRectangle);
 
-void findLargestRectangle       (cv::Mat img, std::vector<cv::Point> &largestRectangle, int minArea=0);
+void draw_rect_centroid         (cv::Mat &img, std::vector<cv::Point> largestRectangle);
+void findLargestRectangle       (cv::Mat img_bin, std::vector<cv::Point> &largestRectangle, int minArea=0);
+void drawRectangle              (cv::Mat img, std::vector<cv::Point> &largestRectangle);
 void fullLine                   (cv::Mat img, cv::Point a, cv::Point b, cv::Scalar color);
 void draw_gridlines             (cv::Mat img);
 void gate_align_normal          (cv::Mat img, cv::Point rectCentroid);
@@ -40,6 +42,7 @@ enum LightingCondition {
 };
 
 double meanValueChannel                         (const cv::Mat& img);
+double meanValueInRedHueRange                   (const cv::Mat& img);
 LightingCondition determineLightingCondition    (const cv::Mat& img);
 
 

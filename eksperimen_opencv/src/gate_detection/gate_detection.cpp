@@ -39,18 +39,28 @@ int min_point_y_idx(std::vector<cv::Point> points)
 
 cv::Point find_rect_centroid(cv::Mat img, std::vector<cv::Point> largestRectangle)
 {
+    // Calculate and return the center point
+    cv::Point rectCentroid((largestRectangle[0].x + largestRectangle[2].x) / 2, (largestRectangle[0].y + largestRectangle[2].y) / 2);
+    return rectCentroid;
+}
+
+void draw_rect_centroid(cv::Mat &img, std::vector<cv::Point> largestRectangle)
+{
+    if (largestRectangle.empty())
+    {
+        return;
+    }
+    
     // Draw the diagonal lines
     cv::line(img, largestRectangle[0], largestRectangle[2], cv::Scalar(255, 0, 0), 2);
     cv::line(img, largestRectangle[1], largestRectangle[3], cv::Scalar(255, 0, 0), 2);
 
-    // Calculate and return the center point
-    cv::Point rectCentroid((largestRectangle[0].x + largestRectangle[2].x) / 2, (largestRectangle[0].y + largestRectangle[2].y) / 2);
+    // Find centroid
+    cv::Point rectCentroid = find_rect_centroid(img, largestRectangle);
 
-    // Draw the center point
+     // Draw the center point
     cv::circle(img, rectCentroid, 5, cv::Scalar(0, 0, 255), -1);
     std::cout << "Rectangle center: " << rectCentroid << std::endl;
-
-    return rectCentroid;
 }
 
 void gate_align_normal(cv::Mat img, cv::Point rectCentroid)
@@ -95,9 +105,9 @@ void gate_align_lateral(cv::Mat img, std::vector<cv::Point> rectangle)
     else std::cout << "LATERAL CENTERED" << std::endl;
 }
 
-void findLargestRectangle(cv::Mat img, std::vector<cv::Point> &largestRectangle, int minArea)
+void findLargestRectangle(cv::Mat img_bin, std::vector<cv::Point> &largestRectangle, int minArea)
 {
-    if (img.empty())
+    if (img_bin.empty())
     {
         std::cerr << "Error: image is empty!" << std::endl;
         return;
@@ -107,7 +117,7 @@ void findLargestRectangle(cv::Mat img, std::vector<cv::Point> &largestRectangle,
     std::vector<cv::Vec4i> hierarchy;
 
     // Detect contours
-    cv::findContours(img, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+    cv::findContours(img_bin, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
     // Filter contours to find the rectangle
     double maxArea = 0;
@@ -122,6 +132,16 @@ void findLargestRectangle(cv::Mat img, std::vector<cv::Point> &largestRectangle,
                 maxArea = area;
                 largestRectangle = contour_poly;
             }
+        }
+    }
+}
+
+void drawRectangle(cv::Mat img, std::vector<cv::Point> &largestRectangle)
+{
+    if (!largestRectangle.empty()) {
+        // Draw the rectangle
+        for (size_t i = 0; i < largestRectangle.size(); i++) {
+            cv::line(img, largestRectangle[i], largestRectangle[(i + 1) % largestRectangle.size()], cv::Scalar(0, 255, 0), 3);
         }
     }
 }
@@ -337,6 +357,42 @@ LightingCondition determineLightingCondition(const cv::Mat& img) {
     } else {
         return NORMAL_LIGHTING;
     }
+}
+
+double meanValueInRedHueRange(const cv::Mat& img) {
+    // Check if the image is empty
+    if (img.empty()) {
+        std::cerr << "Error: Image is empty!" << std::endl;
+        return -1.0; // Return an invalid value to indicate an error
+    }
+
+    // Convert the image to HSV color space
+    cv::Mat hsv;
+    cv::cvtColor(img, hsv, cv::COLOR_BGR2HSV);
+
+    // Define the hue range for red color (you might need to adjust these values)
+    int low_hue1 = 0;
+    int high_hue1 = 30;
+    int low_hue2 = 160;
+    int high_hue2 = 180;
+
+    // Create masks for the specified hue ranges
+    cv::Mat mask1, mask2, mask;
+    cv::inRange(hsv, cv::Scalar(low_hue1, 50, 50), cv::Scalar(high_hue1, 255, 255), mask1);
+    cv::inRange(hsv, cv::Scalar(low_hue2, 50, 50), cv::Scalar(high_hue2, 255, 255), mask2);
+
+    // Combine the masks
+    mask = mask1 | mask2;
+
+    // Extract the Value channel
+    std::vector<cv::Mat> hsv_channels;
+    cv::split(hsv, hsv_channels);
+    cv::Mat value_channel = hsv_channels[2]; // The Value channel
+
+    // Calculate the mean value of the Value channel within the mask
+    cv::Scalar mean_value = cv::mean(value_channel, mask);
+
+    return mean_value[0]; // Return the mean value as a double
 }
 
 }
