@@ -12,6 +12,7 @@ Setup Model dsb:
 4. source devel/setup.sh 
 
 Cara Jalanin : 
+- catkin_make ulang untuk Aksan23 & cam_drone
 - Run SITL
 - cd ke cam_drone & source devel/setup.sh (atau masukin ke path)
 - `roslaunch drone first_sim.launch`
