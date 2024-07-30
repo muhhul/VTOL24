@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="orange_obs">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 1.5708</pose> <!-- Rotating the model 90 degrees to the right -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://orange_obs/meshes/obstacle.dae</uri>
+            <scale>0.5 0.5 0.5</scale> <!-- Scaling the model -->
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0.5 0 1</ambient> <!-- Orange color -->
+          <diffuse>1 0.5 0 1</diffuse> <!-- Orange color -->
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://orange_obs/meshes/obstacle.dae</uri>
+            <scale>0.5 0.5 0.5</scale> <!-- Scaling the collision mesh as well -->
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

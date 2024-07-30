@@ -1,0 +1,8 @@
+prefix=/home/docker/Aksantara/cam_drone/devel
+
+Name: gazebo_things
+Description: Description of gazebo_things
+Version: 0.0.0
+Cflags: -I/home/docker/Aksantara/cam_drone/src/gazebo_things/include
+Libs: -L${prefix}/lib 
+Requires: 

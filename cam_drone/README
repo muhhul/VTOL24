@@ -1,0 +1,12 @@
+Cara jalanin : 
+1. Pindahin file /src/drone/models/orange_obs -> catkin_ws/src/iq_sim/models  
+    ATAU 
+1. Masukin /src/drone/models/ ke path untuk model gazebo
+2. cd ke root folder (cam_drone)
+3. catkin_make di root folder
+4. source devel/setup.sh 
+5. roslaunch drone first_sim.launch
+6. Jalanin SITL 
+7. Terbangin drone pakai sitl manual
+8. rosrun image_processing orangeGate
+9. Pindahin - pindahin gate manual dari gazebo untuk ngetes opencv & ros 

@@ -1,0 +1,2 @@
+drone:gazebo_things:image_processing
+-DCATKIN_DEVEL_PREFIX=/home/docker/Aksantara/cam_drone/devel -DCMAKE_INSTALL_PREFIX=/home/docker/Aksantara/cam_drone/install -G Unix Makefiles

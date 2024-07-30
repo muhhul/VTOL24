@@ -1,0 +1,15 @@
+<launch>
+  <!-- Load the Gazebo simulation -->
+
+  <arg name="gui" default="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find drone)/worlds/dual_cam.world"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <!-- Start the camera viewer (e.g., using rqt_image_view) -->
+  <node pkg="rqt_image_view" type="rqt_image_view" name="rqt_image_view" output="screen">
+    <remap from="/image" to="logitech/fisheye/fisheye_image_raw"/>
+  </node>
+
+</launch>
