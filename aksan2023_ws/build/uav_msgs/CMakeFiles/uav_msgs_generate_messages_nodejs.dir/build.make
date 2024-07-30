@@ -43,75 +43,83 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/docker/Aksantara/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/docker/Aksantara/VTOL24/aksan2023_ws/build
 
 # Utility rule file for uav_msgs_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/progress.make
 
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/ReadQR.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js
 
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from uav_msgs/MissionParams.msg"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from uav_msgs/MissionParams.msg"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from uav_msgs/PrecLand.msg"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/ReadQR.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/ReadQR.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/ReadQR.msg
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/ReadQR.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from uav_msgs/ReadQR.msg"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/ReadQR.msg -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from uav_msgs/DzPosition.msg"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from uav_msgs/PrecLand.msg"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from uav_msgs/PrecLoit.msg"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from uav_msgs/DzPosition.msg"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from uav_msgs/PilotOverride.srv"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from uav_msgs/PrecLoit.msg"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from uav_msgs/DetectQR.srv"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from uav_msgs/PilotOverride.srv"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from uav_msgs/DetectObject.srv"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from uav_msgs/DetectQR.srv"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
 
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from uav_msgs/SetCurrent.srv"
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from uav_msgs/DetectObject.srv"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
+
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js: /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/docker/Aksantara/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from uav_msgs/SetCurrent.srv"
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv -Iuav_msgs:/home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv
 
 uav_msgs_generate_messages_nodejs: uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js
-uav_msgs_generate_messages_nodejs: /home/vtol2022/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/MissionParams.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/ReadQR.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLand.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/DzPosition.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/msg/PrecLoit.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/PilotOverride.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectQR.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/DetectObject.js
+uav_msgs_generate_messages_nodejs: /home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/gennodejs/ros/uav_msgs/srv/SetCurrent.js
 uav_msgs_generate_messages_nodejs: uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/build.make
 
 .PHONY : uav_msgs_generate_messages_nodejs
@@ -122,10 +130,10 @@ uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/build: uav_msgs_genera
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/build
 
 uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/clean
 
 uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/vtol2022/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksan2023_ws/src /home/vtol2022/aksan2023_ws/src/uav_msgs /home/vtol2022/aksan2023_ws/build /home/vtol2022/aksan2023_ws/build/uav_msgs /home/vtol2022/aksan2023_ws/build/uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/docker/Aksantara/VTOL24/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/docker/Aksantara/VTOL24/aksan2023_ws/src /home/docker/Aksantara/VTOL24/aksan2023_ws/src/uav_msgs /home/docker/Aksantara/VTOL24/aksan2023_ws/build /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs /home/docker/Aksantara/VTOL24/aksan2023_ws/build/uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_nodejs.dir/depend
 

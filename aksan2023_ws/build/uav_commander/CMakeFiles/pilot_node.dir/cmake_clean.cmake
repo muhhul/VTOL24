@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/pilot_node"
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/pilot_node.pdb"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/uav_commander/pilot_node"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/uav_commander/pilot_node.pdb"
   "CMakeFiles/pilot_node.dir/src/uav_commander/pilot_node.cpp.o"
 )
 

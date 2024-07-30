@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/tfmini_ros/tfmini_node_asli"
-  "/home/vtol2022/aksantara_ws/devel/lib/tfmini_ros/tfmini_node_asli.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/tfmini_ros/tfmini_node_asli"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/tfmini_ros/tfmini_node_asli.pdb"
   "CMakeFiles/tfmini_node_asli.dir/src/TFmini.cpp.o"
   "CMakeFiles/tfmini_node_asli.dir/src/TFmini_node_asli.cpp.o"
 )

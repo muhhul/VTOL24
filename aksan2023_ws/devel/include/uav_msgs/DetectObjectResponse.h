@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -27,13 +27,15 @@ struct DetectObjectResponse_
     : scanELP(false)
     , scanDZ(false)
     , scanQRPos(false)
-    , scanDistX(false)  {
+    , scanDistX(false)
+    , scanGate(false)  {
     }
   DetectObjectResponse_(const ContainerAllocator& _alloc)
     : scanELP(false)
     , scanDZ(false)
     , scanQRPos(false)
-    , scanDistX(false)  {
+    , scanDistX(false)
+    , scanGate(false)  {
   (void)_alloc;
     }
 
@@ -50,6 +52,9 @@ struct DetectObjectResponse_
 
    typedef uint8_t _scanDistX_type;
   _scanDistX_type scanDistX;
+
+   typedef uint8_t _scanGate_type;
+  _scanGate_type scanGate;
 
 
 
@@ -83,7 +88,8 @@ bool operator==(const ::uav_msgs::DetectObjectResponse_<ContainerAllocator1> & l
   return lhs.scanELP == rhs.scanELP &&
     lhs.scanDZ == rhs.scanDZ &&
     lhs.scanQRPos == rhs.scanQRPos &&
-    lhs.scanDistX == rhs.scanDistX;
+    lhs.scanDistX == rhs.scanDistX &&
+    lhs.scanGate == rhs.scanGate;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -140,12 +146,12 @@ struct MD5Sum< ::uav_msgs::DetectObjectResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "681083348eea32db0b025af17c671d2b";
+    return "efc51c7c5fc2dd12a6aad86f62636a56";
   }
 
   static const char* value(const ::uav_msgs::DetectObjectResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x681083348eea32dbULL;
-  static const uint64_t static_value2 = 0x0b025af17c671d2bULL;
+  static const uint64_t static_value1 = 0xefc51c7c5fc2dd12ULL;
+  static const uint64_t static_value2 = 0xa6aad86f62636a56ULL;
 };
 
 template<class ContainerAllocator>
@@ -168,6 +174,7 @@ struct Definition< ::uav_msgs::DetectObjectResponse_<ContainerAllocator> >
 "bool scanDZ\n"
 "bool scanQRPos\n"
 "bool scanDistX\n"
+"bool scanGate\n"
 "\n"
 ;
   }
@@ -191,6 +198,7 @@ namespace serialization
       stream.next(m.scanDZ);
       stream.next(m.scanQRPos);
       stream.next(m.scanDistX);
+      stream.next(m.scanGate);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -217,6 +225,8 @@ struct Printer< ::uav_msgs::DetectObjectResponse_<ContainerAllocator> >
     Printer<uint8_t>::stream(s, indent + "  ", v.scanQRPos);
     s << indent << "scanDistX: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.scanDistX);
+    s << indent << "scanGate: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.scanGate);
   }
 };
 

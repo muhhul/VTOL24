@@ -55,10 +55,10 @@
   "uav_msgs/DetectObjectRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DetectObject-request>)))
   "Returns md5sum for a message object of type '<DetectObject-request>"
-  "813e76b799652c28a186307d9b704494")
+  "a025889287f882ec66648bcea0082302")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DetectObject-request)))
   "Returns md5sum for a message object of type 'DetectObject-request"
-  "813e76b799652c28a186307d9b704494")
+  "a025889287f882ec66648bcea0082302")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DetectObject-request>)))
   "Returns full string definition for message of type '<DetectObject-request>"
   (cl:format cl:nil "string name~%~%~%"))
@@ -96,6 +96,11 @@
     :reader scanDistX
     :initarg :scanDistX
     :type cl:boolean
+    :initform cl:nil)
+   (scanGate
+    :reader scanGate
+    :initarg :scanGate
+    :type cl:boolean
     :initform cl:nil))
 )
 
@@ -126,12 +131,18 @@
 (cl:defmethod scanDistX-val ((m <DetectObject-response>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader uav_msgs-srv:scanDistX-val is deprecated.  Use uav_msgs-srv:scanDistX instead.")
   (scanDistX m))
+
+(cl:ensure-generic-function 'scanGate-val :lambda-list '(m))
+(cl:defmethod scanGate-val ((m <DetectObject-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader uav_msgs-srv:scanGate-val is deprecated.  Use uav_msgs-srv:scanGate instead.")
+  (scanGate m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <DetectObject-response>) ostream)
   "Serializes a message object of type '<DetectObject-response>"
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'scanELP) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'scanDZ) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'scanQRPos) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'scanDistX) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'scanGate) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <DetectObject-response>) istream)
   "Deserializes a message object of type '<DetectObject-response>"
@@ -139,6 +150,7 @@
     (cl:setf (cl:slot-value msg 'scanDZ) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'scanQRPos) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'scanDistX) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:slot-value msg 'scanGate) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<DetectObject-response>)))
@@ -149,18 +161,19 @@
   "uav_msgs/DetectObjectResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DetectObject-response>)))
   "Returns md5sum for a message object of type '<DetectObject-response>"
-  "813e76b799652c28a186307d9b704494")
+  "a025889287f882ec66648bcea0082302")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DetectObject-response)))
   "Returns md5sum for a message object of type 'DetectObject-response"
-  "813e76b799652c28a186307d9b704494")
+  "a025889287f882ec66648bcea0082302")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DetectObject-response>)))
   "Returns full string definition for message of type '<DetectObject-response>"
-  (cl:format cl:nil "bool scanELP~%bool scanDZ~%bool scanQRPos~%bool scanDistX~%~%~%~%"))
+  (cl:format cl:nil "bool scanELP~%bool scanDZ~%bool scanQRPos~%bool scanDistX~%bool scanGate~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DetectObject-response)))
   "Returns full string definition for message of type 'DetectObject-response"
-  (cl:format cl:nil "bool scanELP~%bool scanDZ~%bool scanQRPos~%bool scanDistX~%~%~%~%"))
+  (cl:format cl:nil "bool scanELP~%bool scanDZ~%bool scanQRPos~%bool scanDistX~%bool scanGate~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DetectObject-response>))
   (cl:+ 0
+     1
      1
      1
      1
@@ -173,6 +186,7 @@
     (cl:cons ':scanDZ (scanDZ msg))
     (cl:cons ':scanQRPos (scanQRPos msg))
     (cl:cons ':scanDistX (scanDistX msg))
+    (cl:cons ':scanGate (scanGate msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'DetectObject)))
   'DetectObject-request)

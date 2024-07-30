@@ -98,6 +98,7 @@ class DetectObjectResponse {
       this.scanDZ = null;
       this.scanQRPos = null;
       this.scanDistX = null;
+      this.scanGate = null;
     }
     else {
       if (initObj.hasOwnProperty('scanELP')) {
@@ -124,6 +125,12 @@ class DetectObjectResponse {
       else {
         this.scanDistX = false;
       }
+      if (initObj.hasOwnProperty('scanGate')) {
+        this.scanGate = initObj.scanGate
+      }
+      else {
+        this.scanGate = false;
+      }
     }
   }
 
@@ -137,6 +144,8 @@ class DetectObjectResponse {
     bufferOffset = _serializer.bool(obj.scanQRPos, buffer, bufferOffset);
     // Serialize message field [scanDistX]
     bufferOffset = _serializer.bool(obj.scanDistX, buffer, bufferOffset);
+    // Serialize message field [scanGate]
+    bufferOffset = _serializer.bool(obj.scanGate, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -152,11 +161,13 @@ class DetectObjectResponse {
     data.scanQRPos = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [scanDistX]
     data.scanDistX = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [scanGate]
+    data.scanGate = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 4;
+    return 5;
   }
 
   static datatype() {
@@ -166,7 +177,7 @@ class DetectObjectResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '681083348eea32db0b025af17c671d2b';
+    return 'efc51c7c5fc2dd12a6aad86f62636a56';
   }
 
   static messageDefinition() {
@@ -176,6 +187,7 @@ class DetectObjectResponse {
     bool scanDZ
     bool scanQRPos
     bool scanDistX
+    bool scanGate
     
     
     `;
@@ -215,6 +227,13 @@ class DetectObjectResponse {
       resolved.scanDistX = false
     }
 
+    if (msg.scanGate !== undefined) {
+      resolved.scanGate = msg.scanGate;
+    }
+    else {
+      resolved.scanGate = false
+    }
+
     return resolved;
     }
 };
@@ -222,6 +241,6 @@ class DetectObjectResponse {
 module.exports = {
   Request: DetectObjectRequest,
   Response: DetectObjectResponse,
-  md5sum() { return '813e76b799652c28a186307d9b704494'; },
+  md5sum() { return 'a025889287f882ec66648bcea0082302'; },
   datatype() { return 'uav_msgs/DetectObject'; }
 };

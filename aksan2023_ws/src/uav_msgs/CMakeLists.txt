@@ -19,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 #  PayloadROI.msg
 #  CameraInfoExtended.msg
   MissionParams.msg
-#  ReadQR.msg
+  ReadQR.msg
   PrecLand.msg
   DzPosition.msg
   PrecLoit.msg

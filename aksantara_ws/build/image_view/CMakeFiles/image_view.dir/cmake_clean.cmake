@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/libimage_view.pdb"
-  "/home/vtol2022/aksantara_ws/devel/lib/libimage_view.so"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libimage_view.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libimage_view.so"
   "CMakeFiles/image_view.dir/src/nodelets/disparity_nodelet.cpp.o"
   "CMakeFiles/image_view.dir/src/nodelets/image_nodelet.cpp.o"
   "CMakeFiles/image_view.dir/src/nodelets/window_thread.cpp.o"

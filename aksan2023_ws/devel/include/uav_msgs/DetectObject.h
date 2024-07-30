@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::uav_msgs::DetectObject > {
   static const char* value()
   {
-    return "813e76b799652c28a186307d9b704494";
+    return "a025889287f882ec66648bcea0082302";
   }
 
   static const char* value(const ::uav_msgs::DetectObject&) { return value(); }

@@ -1,8 +1,8 @@
-prefix=/home/vtol2022/aksantara_ws/devel
+prefix=/home/docker/Aksantara/VTOL24/aksantara_ws/devel
 
 Name: gazebo_things
 Description: Description of gazebo_things
 Version: 0.0.0
-Cflags: -I/home/vtol2022/aksantara_ws/src/gazebo_things/include
+Cflags: -I/home/docker/Aksantara/VTOL24/aksantara_ws/src/gazebo_things/include
 Libs: -L${prefix}/lib 
 Requires: 

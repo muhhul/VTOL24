@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/vtol2022/aksantara_ws/src/usb_cam/include".split(';') if "/home/vtol2022/aksantara_ws/src/usb_cam/include" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/docker/Aksantara/VTOL24/aksantara_ws/src/usb_cam/include".split(';') if "/home/docker/Aksantara/VTOL24/aksantara_ws/src/usb_cam/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lusb_cam".split(';') if "-lusb_cam" != "" else []
 PROJECT_NAME = "usb_cam"
-PROJECT_SPACE_DIR = "/home/vtol2022/aksantara_ws/devel"
+PROJECT_SPACE_DIR = "/home/docker/Aksantara/VTOL24/aksantara_ws/devel"
 PROJECT_VERSION = "0.3.6"

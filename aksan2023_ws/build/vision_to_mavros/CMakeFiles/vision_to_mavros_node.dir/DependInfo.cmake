@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vtol2022/aksan2023_ws/src/vision_to_mavros/src/vision_to_mavros.cpp" "/home/vtol2022/aksan2023_ws/build/vision_to_mavros/CMakeFiles/vision_to_mavros_node.dir/src/vision_to_mavros.cpp.o"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/src/vision_to_mavros/src/vision_to_mavros.cpp" "/home/docker/Aksantara/VTOL24/aksan2023_ws/build/vision_to_mavros/CMakeFiles/vision_to_mavros_node.dir/src/vision_to_mavros.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,6 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/docker/catkin_ws/devel/.private/mavros_msgs/include"
+  "/home/docker/catkin_ws/src/mavros/mavros_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/opencv4"

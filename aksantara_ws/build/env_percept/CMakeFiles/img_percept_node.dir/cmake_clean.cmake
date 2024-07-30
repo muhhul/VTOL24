@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/env_percept/img_percept_node"
-  "/home/vtol2022/aksantara_ws/devel/lib/env_percept/img_percept_node.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/env_percept/img_percept_node"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/env_percept/img_percept_node.pdb"
   "CMakeFiles/img_percept_node.dir/src/img_percept_node.cpp.o"
 )
 

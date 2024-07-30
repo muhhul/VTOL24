@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/iq_vision/canny_edge_sol"
-  "/home/vtol2022/aksantara_ws/devel/lib/iq_vision/canny_edge_sol.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/iq_vision/canny_edge_sol"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/iq_vision/canny_edge_sol.pdb"
   "CMakeFiles/canny_edge_sol.dir/src/canny_edge_sol.cpp.o"
 )
 

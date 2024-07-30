@@ -38,6 +38,8 @@ namespace uav_commander{
         	uav_funcs.emplace("loiterLand", &loiterLand);   
         	uav_funcs.emplace("PDM", &PDM);       	        	    	        	        	    	
         	uav_funcs.emplace("neutralOpengrab", &neutralOpengrab);       	        	    	        	        	    	        	
+          uav_funcs.emplace("scanGate", &scanGate);
+
 	}
 
 	// Function to parse missions from file. 

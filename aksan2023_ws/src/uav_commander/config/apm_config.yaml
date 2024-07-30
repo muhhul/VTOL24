@@ -138,10 +138,10 @@ mission:
 #    Check http://wiki.ros.org/mavros/Enumerations
 ##
 distance_sensor:
-#  rangefinder_sub:
-#    subscriber: true
-#    id: 0
-#    orientation: PITCH_270  # only that orientation are supported by APM 3.4+
+  rangefinder_sub:
+    subscriber: true
+    id: 0
+    orientation: PITCH_270  # only that orientation are supported by APM 3.4+
   rangefinder_pub:
     id: 0
     frame_id: "lidarArkflow"

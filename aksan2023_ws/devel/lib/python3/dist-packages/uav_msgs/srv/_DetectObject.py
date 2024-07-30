@@ -135,17 +135,18 @@ import struct
 
 
 class DetectObjectResponse(genpy.Message):
-  _md5sum = "681083348eea32db0b025af17c671d2b"
+  _md5sum = "efc51c7c5fc2dd12a6aad86f62636a56"
   _type = "uav_msgs/DetectObjectResponse"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool scanELP
 bool scanDZ
 bool scanQRPos
 bool scanDistX
+bool scanGate
 
 """
-  __slots__ = ['scanELP','scanDZ','scanQRPos','scanDistX']
-  _slot_types = ['bool','bool','bool','bool']
+  __slots__ = ['scanELP','scanDZ','scanQRPos','scanDistX','scanGate']
+  _slot_types = ['bool','bool','bool','bool','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -155,7 +156,7 @@ bool scanDistX
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       scanELP,scanDZ,scanQRPos,scanDistX
+       scanELP,scanDZ,scanQRPos,scanDistX,scanGate
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -172,11 +173,14 @@ bool scanDistX
         self.scanQRPos = False
       if self.scanDistX is None:
         self.scanDistX = False
+      if self.scanGate is None:
+        self.scanGate = False
     else:
       self.scanELP = False
       self.scanDZ = False
       self.scanQRPos = False
       self.scanDistX = False
+      self.scanGate = False
 
   def _get_types(self):
     """
@@ -191,7 +195,7 @@ bool scanDistX
     """
     try:
       _x = self
-      buff.write(_get_struct_4B().pack(_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX))
+      buff.write(_get_struct_5B().pack(_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX, _x.scanGate))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -206,12 +210,13 @@ bool scanDistX
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX,) = _get_struct_4B().unpack(str[start:end])
+      end += 5
+      (_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX, _x.scanGate,) = _get_struct_5B().unpack(str[start:end])
       self.scanELP = bool(self.scanELP)
       self.scanDZ = bool(self.scanDZ)
       self.scanQRPos = bool(self.scanQRPos)
       self.scanDistX = bool(self.scanDistX)
+      self.scanGate = bool(self.scanGate)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -225,7 +230,7 @@ bool scanDistX
     """
     try:
       _x = self
-      buff.write(_get_struct_4B().pack(_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX))
+      buff.write(_get_struct_5B().pack(_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX, _x.scanGate))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -241,12 +246,13 @@ bool scanDistX
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX,) = _get_struct_4B().unpack(str[start:end])
+      end += 5
+      (_x.scanELP, _x.scanDZ, _x.scanQRPos, _x.scanDistX, _x.scanGate,) = _get_struct_5B().unpack(str[start:end])
       self.scanELP = bool(self.scanELP)
       self.scanDZ = bool(self.scanDZ)
       self.scanQRPos = bool(self.scanQRPos)
       self.scanDistX = bool(self.scanDistX)
+      self.scanGate = bool(self.scanGate)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -255,14 +261,14 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_4B = None
-def _get_struct_4B():
-    global _struct_4B
-    if _struct_4B is None:
-        _struct_4B = struct.Struct("<4B")
-    return _struct_4B
+_struct_5B = None
+def _get_struct_5B():
+    global _struct_5B
+    if _struct_5B is None:
+        _struct_5B = struct.Struct("<5B")
+    return _struct_5B
 class DetectObject(object):
   _type          = 'uav_msgs/DetectObject'
-  _md5sum = '813e76b799652c28a186307d9b704494'
+  _md5sum = 'a025889287f882ec66648bcea0082302'
   _request_class  = DetectObjectRequest
   _response_class = DetectObjectResponse

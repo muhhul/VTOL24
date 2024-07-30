@@ -9,4 +9,6 @@
           SCANQRPOS
           SCANDISTX-VAL
           SCANDISTX
+          SCANGATE-VAL
+          SCANGATE
 ))

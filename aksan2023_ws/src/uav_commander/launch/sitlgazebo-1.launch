@@ -15,7 +15,7 @@
  	<env name="ROSCONSOLE_CONFIG_FILE" value="$(find uav_commander)/config/rosconsole.config" />
 	<env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time:%H:%M:%S}]: ${message}" />
   
-  
+	<!-- Isi APM Launch untuk MAVROS-->
   <include file="$(find mavros)/launch/node.launch">
     <arg name="pluginlists_yaml" value="$(find uav_commander)/config/apm_pluginlists.yaml" />
     <arg name="config_yaml" value="$(find uav_commander)/config/apm_config.yaml" />
@@ -28,7 +28,8 @@
     <arg name="fcu_protocol" value="$(arg fcu_protocol)" />
     <arg name="respawn_mavros" default="$(arg respawn_mavros)" />
   </include>
-  
+
+
 	<node name="gazebo_things" pkg="gazebo_things" type="t265" output="screen">
 		<param name="noise" value="true" />
 		<param name="noise_max" value="0.2" />
@@ -37,16 +38,15 @@
 		<param name="scale_z_max" value="0.2" />
 		<param name="rf_depan" value="true" />
 		<param name="rf_bawah" value="true" />
-        <!-- RF SAMPING-->
 		<param name="rf_kanan" value="true" />
-		<param name="rf_kiri" value="true" />		
+		<param name="rf_kiri" value="true" />
         
-        <param name="tembok_x" value="6.8" />
-		<!--<param name="bawah_topic" value="/mavros/distance_sensor/rangefinder_sub" />-->
+    <param name="tembok_x" value="6.8" />
     <param name="test_rf" value="true" />
     <param name="rf_atas" value="true" />
     <param name="link_name" value="iris::drone_with_camera::iris::base_link" />
   </node>
-	<include file="$(find vision_to_mavros)/launch/sitl_tf_to_mavros.launch"></include>  
+	<include file="$(find vision_to_mavros)/launch/sitl_tf_to_mavros.launch"></include>
+
 
 </launch>

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/usb_cam/usb_cam_node"
-  "/home/vtol2022/aksantara_ws/devel/lib/usb_cam/usb_cam_node.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/usb_cam/usb_cam_node"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/usb_cam/usb_cam_node.pdb"
   "CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o"
 )
 

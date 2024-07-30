@@ -15,10 +15,12 @@ int main(int argc, char** argv)
   ros::NodeHandle globalNh();
   env_percept::ImageProcessor imageProcessor;
   ros::Rate rate(25); // SESUAIKAN DENGAN FREKUENSI PUBLISHER IMAGE_PROC 
+  
   while (ros::ok()) {
     imageProcessor.publishAll();
     rate.sleep();
     ros::spinOnce();
   }
+
   return 0;
 }

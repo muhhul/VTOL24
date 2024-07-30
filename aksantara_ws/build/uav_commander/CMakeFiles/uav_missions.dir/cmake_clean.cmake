@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/libuav_missions.pdb"
-  "/home/vtol2022/aksantara_ws/devel/lib/libuav_missions.so"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libuav_missions.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libuav_missions.so"
   "CMakeFiles/uav_missions.dir/src/uav_commander/uav_missions.cpp.o"
 )
 

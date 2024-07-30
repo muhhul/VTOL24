@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/libpilot.pdb"
-  "/home/vtol2022/aksantara_ws/devel/lib/libpilot.so"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libpilot.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/libpilot.so"
   "CMakeFiles/pilot.dir/src/uav_commander/pilot.cpp.o"
 )
 

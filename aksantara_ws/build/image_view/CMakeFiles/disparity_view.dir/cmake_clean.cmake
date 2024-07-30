@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/image_view/disparity_view"
-  "/home/vtol2022/aksantara_ws/devel/lib/image_view/disparity_view.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/image_view/disparity_view"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/image_view/disparity_view.pdb"
   "CMakeFiles/disparity_view.dir/src/nodes/disparity_view.cpp.o"
 )
 

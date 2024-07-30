@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksantara_ws/src
+CMAKE_SOURCE_DIR = /home/docker/Aksantara/VTOL24/aksantara_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksantara_ws/build
+CMAKE_BINARY_DIR = /home/docker/Aksantara/VTOL24/aksantara_ws/build
 
 # Utility rule file for uav_msgs_gennodejs.
 
@@ -63,10 +63,10 @@ uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/build: uav_msgs_gennodejs
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/build
 
 uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/clean:
-	cd /home/vtol2022/aksantara_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_gennodejs.dir/cmake_clean.cmake
+	cd /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_gennodejs.dir/cmake_clean.cmake
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/clean
 
 uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/depend:
-	cd /home/vtol2022/aksantara_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksantara_ws/src /home/vtol2022/aksantara_ws/src/uav_msgs /home/vtol2022/aksantara_ws/build /home/vtol2022/aksantara_ws/build/uav_msgs /home/vtol2022/aksantara_ws/build/uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/docker/Aksantara/VTOL24/aksantara_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/docker/Aksantara/VTOL24/aksantara_ws/src /home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs /home/docker/Aksantara/VTOL24/aksantara_ws/build /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_gennodejs.dir/depend
 

@@ -27,6 +27,7 @@
 #include <mavros_msgs/GlobalPositionTarget.h>
 #include <std_msgs/Float64.h>
 #include <std_msgs/String.h>
+#include <std_msgs/Bool.h>
 #include <functional>
 #include <map>
 #include <sensor_msgs/NavSatFix.h>
@@ -49,6 +50,9 @@ namespace uav_commander
 	double GPSOriginHeading = 0.0;
 	double GPSOriginLat = 0.0;
 	double GPSOriginLon = 0.0;
+
+  bool gate_centered = false;
+  bool gate_exist = false;
 
     #if DEBUG_FUNCS
 	int testWASD			(const uav_msgs::MissionParams &m, ros::NodeHandle &nh);
@@ -79,6 +83,10 @@ namespace uav_commander
 	int PDM		(const uav_msgs::MissionParams &m, ros::NodeHandle &nh);	    		    
 	int neutralOpengrab		(const uav_msgs::MissionParams &m, ros::NodeHandle &nh);	    		    	
 	#endif
+
+  int scanGate(const uav_msgs::MissionParams &m, ros::NodeHandle &nh);
+  void gateCallback(const std_msgs::Bool::ConstPtr& msg);
+  void gateExistCallback(const std_msgs::Bool::ConstPtr& msg);
 }
 
 #endif

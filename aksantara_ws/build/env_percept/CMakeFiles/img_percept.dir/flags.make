@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=c++11 -Wall -lzbar
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"env_percept\" -Dimg_percept_EXPORTS
 
-CXX_INCLUDES = -I/home/vtol2022/aksantara_ws/src/env_percept/include -I/home/vtol2022/aksantara_ws/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4 
+CXX_INCLUDES = -I/home/docker/Aksantara/VTOL24/aksantara_ws/src/env_percept/include -I/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include -I/home/docker/catkin_ws/devel/.private/mavros_msgs/include -I/home/docker/catkin_ws/src/mavros/mavros_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4 
 

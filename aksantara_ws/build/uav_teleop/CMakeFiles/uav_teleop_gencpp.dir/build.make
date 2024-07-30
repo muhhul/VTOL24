@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksantara_ws/src
+CMAKE_SOURCE_DIR = /home/docker/Aksantara/VTOL24/aksantara_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksantara_ws/build
+CMAKE_BINARY_DIR = /home/docker/Aksantara/VTOL24/aksantara_ws/build
 
 # Utility rule file for uav_teleop_gencpp.
 
@@ -63,10 +63,10 @@ uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/build: uav_teleop_gencpp
 .PHONY : uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/build
 
 uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/clean:
-	cd /home/vtol2022/aksantara_ws/build/uav_teleop && $(CMAKE_COMMAND) -P CMakeFiles/uav_teleop_gencpp.dir/cmake_clean.cmake
+	cd /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_teleop && $(CMAKE_COMMAND) -P CMakeFiles/uav_teleop_gencpp.dir/cmake_clean.cmake
 .PHONY : uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/clean
 
 uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/depend:
-	cd /home/vtol2022/aksantara_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksantara_ws/src /home/vtol2022/aksantara_ws/src/uav_teleop /home/vtol2022/aksantara_ws/build /home/vtol2022/aksantara_ws/build/uav_teleop /home/vtol2022/aksantara_ws/build/uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/docker/Aksantara/VTOL24/aksantara_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/docker/Aksantara/VTOL24/aksantara_ws/src /home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_teleop /home/docker/Aksantara/VTOL24/aksantara_ws/build /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_teleop /home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : uav_teleop/CMakeFiles/uav_teleop_gencpp.dir/depend
 

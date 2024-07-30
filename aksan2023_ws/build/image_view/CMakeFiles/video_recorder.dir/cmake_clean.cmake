@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/image_view/video_recorder"
-  "/home/vtol2022/aksan2023_ws/devel/lib/image_view/video_recorder.pdb"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/image_view/video_recorder"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/image_view/video_recorder.pdb"
   "CMakeFiles/video_recorder.dir/src/nodes/video_recorder.cpp.o"
 )
 

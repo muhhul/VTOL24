@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/include/video_stream_opencv/VideoStreamConfig.h"
-  "/home/vtol2022/aksan2023_ws/devel/lib/python3/dist-packages/video_stream_opencv/cfg/VideoStreamConfig.py"
-  "/home/vtol2022/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig-usage.dox"
-  "/home/vtol2022/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig.dox"
-  "/home/vtol2022/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig.wikidoc"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/include/video_stream_opencv/VideoStreamConfig.h"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/python3/dist-packages/video_stream_opencv/cfg/VideoStreamConfig.py"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig-usage.dox"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig.dox"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/video_stream_opencv/docs/VideoStreamConfig.wikidoc"
   "CMakeFiles/video_stream_opencv_gencfg"
 )
 

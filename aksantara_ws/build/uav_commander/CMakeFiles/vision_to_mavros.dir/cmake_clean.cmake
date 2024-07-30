@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/uav_commander/vision_to_mavros"
-  "/home/vtol2022/aksantara_ws/devel/lib/uav_commander/vision_to_mavros.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/uav_commander/vision_to_mavros"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/uav_commander/vision_to_mavros.pdb"
   "CMakeFiles/vision_to_mavros.dir/src/uav_commander/vision_to_mavros.cpp.o"
 )
 

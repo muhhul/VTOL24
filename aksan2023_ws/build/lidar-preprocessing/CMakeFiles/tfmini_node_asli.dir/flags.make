@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -std=gnu++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"tfmini_ros\"
 
-CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/vtol2022/aksan2023_ws/src/lidar-preprocessing/include 
+CXX_INCLUDES = -I/home/docker/catkin_ws/devel/.private/mavros_msgs/include -I/home/docker/catkin_ws/src/mavros/mavros_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/docker/Aksantara/VTOL24/aksan2023_ws/src/lidar-preprocessing/include 
 

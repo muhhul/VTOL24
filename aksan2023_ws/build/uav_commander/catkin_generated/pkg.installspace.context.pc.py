@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-luav_missions_utils;-luav_missions;-lpilot".split(';') if "-luav_missions_utils;-luav_missions;-lpilot" != "" else []
 PROJECT_NAME = "uav_commander"
-PROJECT_SPACE_DIR = "/home/vtol2022/aksan2023_ws/install"
+PROJECT_SPACE_DIR = "/home/docker/Aksantara/VTOL24/aksan2023_ws/install"
 PROJECT_VERSION = "0.0.0"

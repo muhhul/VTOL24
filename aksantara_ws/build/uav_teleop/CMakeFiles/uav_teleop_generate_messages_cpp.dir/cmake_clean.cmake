@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/include/uav_teleop/Key.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_teleop/Key.h"
   "CMakeFiles/uav_teleop_generate_messages_cpp"
 )
 

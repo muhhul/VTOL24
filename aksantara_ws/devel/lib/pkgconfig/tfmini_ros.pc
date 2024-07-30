@@ -1,8 +1,8 @@
-prefix=/home/vtol2022/aksantara_ws/devel
+prefix=/home/docker/Aksantara/VTOL24/aksantara_ws/devel
 
 Name: tfmini_ros
 Description: Description of tfmini_ros
 Version: 0.0.1
-Cflags: -I/home/vtol2022/aksantara_ws/src/lidar-preprocessing/include
+Cflags: -I/home/docker/Aksantara/VTOL24/aksantara_ws/src/lidar-preprocessing/include
 Libs: -L${prefix}/lib 
 Requires: 

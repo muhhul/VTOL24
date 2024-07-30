@@ -2,6 +2,8 @@
 	<!-- vim: set ft=xml noet : -->
 	<!-- udp://127.0.0.1:14551@14555 -->
 
+	<!-- MISSION LAUNCH FILE -->
+
 	<!-- <arg name="pilot_filename" default="fullIndoor23.txt" /> -->
     <arg name="pilot_filename" default="testVelocity.txt" />
 	<arg name="config_filename" default="gazebo_config.txt" />

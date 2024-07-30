@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/python3/dist-packages/uav_teleop/msg/_Key.py"
-  "/home/vtol2022/aksan2023_ws/devel/lib/python3/dist-packages/uav_teleop/msg/__init__.py"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/python3/dist-packages/uav_teleop/msg/_Key.py"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/lib/python3/dist-packages/uav_teleop/msg/__init__.py"
   "CMakeFiles/uav_teleop_generate_messages_py"
 )
 

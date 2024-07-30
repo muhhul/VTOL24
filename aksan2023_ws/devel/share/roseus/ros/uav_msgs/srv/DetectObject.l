@@ -57,7 +57,7 @@
 
 (defclass uav_msgs::DetectObjectResponse
   :super ros::object
-  :slots (_scanELP _scanDZ _scanQRPos _scanDistX ))
+  :slots (_scanELP _scanDZ _scanQRPos _scanDistX _scanGate ))
 
 (defmethod uav_msgs::DetectObjectResponse
   (:init
@@ -66,12 +66,14 @@
     ((:scanDZ __scanDZ) nil)
     ((:scanQRPos __scanQRPos) nil)
     ((:scanDistX __scanDistX) nil)
+    ((:scanGate __scanGate) nil)
     )
    (send-super :init)
    (setq _scanELP __scanELP)
    (setq _scanDZ __scanDZ)
    (setq _scanQRPos __scanQRPos)
    (setq _scanDistX __scanDistX)
+   (setq _scanGate __scanGate)
    self)
   (:scanELP
    (&optional (__scanELP :null))
@@ -85,6 +87,9 @@
   (:scanDistX
    (&optional (__scanDistX :null))
    (if (not (eq __scanDistX :null)) (setq _scanDistX __scanDistX)) _scanDistX)
+  (:scanGate
+   (&optional (__scanGate :null))
+   (if (not (eq __scanGate :null)) (setq _scanGate __scanGate)) _scanGate)
   (:serialization-length
    ()
    (+
@@ -95,6 +100,8 @@
     ;; bool _scanQRPos
     1
     ;; bool _scanDistX
+    1
+    ;; bool _scanGate
     1
     ))
   (:serialize
@@ -109,6 +116,8 @@
        (if _scanQRPos (write-byte -1 s) (write-byte 0 s))
      ;; bool _scanDistX
        (if _scanDistX (write-byte -1 s) (write-byte 0 s))
+     ;; bool _scanGate
+       (if _scanGate (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -121,6 +130,8 @@
      (setq _scanQRPos (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _scanDistX
      (setq _scanDistX (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _scanGate
+     (setq _scanGate (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -129,7 +140,7 @@
   :super ros::object
   :slots ())
 
-(setf (get uav_msgs::DetectObject :md5sum-) "813e76b799652c28a186307d9b704494")
+(setf (get uav_msgs::DetectObject :md5sum-) "a025889287f882ec66648bcea0082302")
 (setf (get uav_msgs::DetectObject :datatype-) "uav_msgs/DetectObject")
 (setf (get uav_msgs::DetectObject :request) uav_msgs::DetectObjectRequest)
 (setf (get uav_msgs::DetectObject :response) uav_msgs::DetectObjectResponse)
@@ -137,7 +148,7 @@
 (defmethod uav_msgs::DetectObjectRequest
   (:response () (instance uav_msgs::DetectObjectResponse :init)))
 
-(setf (get uav_msgs::DetectObjectRequest :md5sum-) "813e76b799652c28a186307d9b704494")
+(setf (get uav_msgs::DetectObjectRequest :md5sum-) "a025889287f882ec66648bcea0082302")
 (setf (get uav_msgs::DetectObjectRequest :datatype-) "uav_msgs/DetectObjectRequest")
 (setf (get uav_msgs::DetectObjectRequest :definition-)
       "string name
@@ -146,10 +157,11 @@ bool scanELP
 bool scanDZ
 bool scanQRPos
 bool scanDistX
+bool scanGate
 
 ")
 
-(setf (get uav_msgs::DetectObjectResponse :md5sum-) "813e76b799652c28a186307d9b704494")
+(setf (get uav_msgs::DetectObjectResponse :md5sum-) "a025889287f882ec66648bcea0082302")
 (setf (get uav_msgs::DetectObjectResponse :datatype-) "uav_msgs/DetectObjectResponse")
 (setf (get uav_msgs::DetectObjectResponse :definition-)
       "string name
@@ -158,11 +170,12 @@ bool scanELP
 bool scanDZ
 bool scanQRPos
 bool scanDistX
+bool scanGate
 
 ")
 
 
 
-(provide :uav_msgs/DetectObject "813e76b799652c28a186307d9b704494")
+(provide :uav_msgs/DetectObject "a025889287f882ec66648bcea0082302")
 
 

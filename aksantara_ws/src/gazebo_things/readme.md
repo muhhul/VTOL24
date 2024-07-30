@@ -24,4 +24,3 @@
 - `sim_vehicle.py -v ArduCopter -f gazebo-iris --console`
 - `roslaunch uav_commander sitlgazebo-1.launch`
 - `roslaunch uav_commander sitlgazebo-2.launch`
-a

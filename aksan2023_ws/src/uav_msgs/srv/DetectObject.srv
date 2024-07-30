@@ -4,3 +4,4 @@ bool scanELP
 bool scanDZ
 bool scanQRPos
 bool scanDistX
+bool scanGate

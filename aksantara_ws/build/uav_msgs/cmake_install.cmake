@@ -1,8 +1,8 @@
-# Install script for directory: /home/vtol2022/aksantara_ws/src/uav_msgs
+# Install script for directory: /home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vtol2022/aksantara_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/docker/Aksantara/VTOL24/aksantara_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,70 +39,70 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/msg" TYPE FILE FILES
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/msg/MissionParams.msg"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/msg/PrecLand.msg"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/msg/DzPosition.msg"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/msg/PrecLoit.msg"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/msg/MissionParams.msg"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/msg/PrecLand.msg"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/msg/DzPosition.msg"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/msg/PrecLoit.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/srv" TYPE FILE FILES
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/srv/PilotOverride.srv"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/srv/DetectQR.srv"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/srv/DetectObject.srv"
-    "/home/vtol2022/aksantara_ws/src/uav_msgs/srv/SetCurrent.srv"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/srv/PilotOverride.srv"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/srv/DetectQR.srv"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/srv/DetectObject.srv"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/srv/SetCurrent.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/cmake" TYPE FILE FILES "/home/vtol2022/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/cmake" TYPE FILE FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/devel/include/uav_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/devel/share/roseus/ros/uav_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/share/roseus/ros/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/devel/share/common-lisp/ros/uav_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/share/common-lisp/ros/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/devel/share/gennodejs/ros/uav_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/share/gennodejs/ros/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/vtol2022/aksantara_ws/devel/lib/python3/dist-packages/uav_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/python3/dist-packages/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/devel/lib/python3/dist-packages/uav_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/python3/dist-packages/uav_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vtol2022/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/cmake" TYPE FILE FILES "/home/vtol2022/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/cmake" TYPE FILE FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs/cmake" TYPE FILE FILES
-    "/home/vtol2022/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgsConfig.cmake"
-    "/home/vtol2022/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgsConfig-version.cmake"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgsConfig.cmake"
+    "/home/docker/Aksantara/VTOL24/aksantara_ws/build/uav_msgs/catkin_generated/installspace/uav_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs" TYPE FILE FILES "/home/vtol2022/aksantara_ws/src/uav_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uav_msgs" TYPE FILE FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uav_msgs" TYPE DIRECTORY FILES "/home/vtol2022/aksantara_ws/src/uav_msgs/include/uav_msgs/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/uav_msgs" TYPE DIRECTORY FILES "/home/docker/Aksantara/VTOL24/aksantara_ws/src/uav_msgs/include/uav_msgs/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

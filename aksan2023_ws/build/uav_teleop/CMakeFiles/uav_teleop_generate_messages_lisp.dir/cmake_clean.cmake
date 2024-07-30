@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/share/common-lisp/ros/uav_teleop/msg/Key.lisp"
+  "/home/docker/Aksantara/VTOL24/aksan2023_ws/devel/share/common-lisp/ros/uav_teleop/msg/Key.lisp"
   "CMakeFiles/uav_teleop_generate_messages_lisp"
 )
 

@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/DetectObject.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/DetectQR.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/DzPosition.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/MissionParams.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/PilotOverride.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/PrecLand.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/PrecLoit.h"
-  "/home/vtol2022/aksantara_ws/devel/include/uav_msgs/SetCurrent.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/DetectObject.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/DetectQR.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/DzPosition.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/MissionParams.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/PilotOverride.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/PrecLand.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/PrecLoit.h"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/include/uav_msgs/SetCurrent.h"
   "CMakeFiles/uav_msgs_generate_messages_cpp"
 )
 

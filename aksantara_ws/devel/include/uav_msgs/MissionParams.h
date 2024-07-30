@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -39,16 +39,16 @@ struct MissionParams_
 
 
 
-   typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _bools_type;
+   typedef std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> _bools_type;
   _bools_type bools;
 
-   typedef std::vector<int16_t, typename ContainerAllocator::template rebind<int16_t>::other >  _ints_type;
+   typedef std::vector<int16_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int16_t>> _ints_type;
   _ints_type ints;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _strings_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _strings_type;
   _strings_type strings;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _doubles_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _doubles_type;
   _doubles_type doubles;
 
 
@@ -224,7 +224,7 @@ struct Printer< ::uav_msgs::MissionParams_<ContainerAllocator> >
     for (size_t i = 0; i < v.strings.size(); ++i)
     {
       s << indent << "  strings[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.strings[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.strings[i]);
     }
     s << indent << "doubles[]" << std::endl;
     for (size_t i = 0; i < v.doubles.size(); ++i)

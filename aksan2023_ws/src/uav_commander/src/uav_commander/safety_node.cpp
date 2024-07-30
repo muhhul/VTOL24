@@ -232,7 +232,7 @@ bool fsTrigger()
 
     #elif FS_ALT_SOURCE == 2
     auto relAltPtr = ros::topic::waitForMessage<sensor_msgs::Range>(
-        "/mavros/distance_sensor/rangefinder_pub", ros::Duration(WAIT_MSG_TIMEOUT));
+        "/mavros/distance_sensor/rangefinder_sub", ros::Duration(WAIT_MSG_TIMEOUT));
     #endif
 
     if (relAltPtr == NULL) {
@@ -542,7 +542,7 @@ int main(int argc, char **argv)
                     }
                 };
                 ros::Subscriber waitAlt = nh->subscribe<sensor_msgs::Range>(
-                    "/mavros/distance_sensor/rangefinder_pub", 1, waitAltCb);
+                    "/mavros/distance_sensor/rangefinder_sub", 1, waitAltCb);
 
                 err = landSrv();
                 if (err == SERVICE_ERROR) {

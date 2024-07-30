@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/vtol2022/aksantara_ws/build'
+export CMAKE_PREFIX_PATH="/home/docker/Aksantara/VTOL24/aksantara_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/docker/Aksantara/VTOL24/aksantara_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/docker/Aksantara/VTOL24/aksantara_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/docker/Aksantara/VTOL24/aksantara_ws/src:$ROS_PACKAGE_PATH"

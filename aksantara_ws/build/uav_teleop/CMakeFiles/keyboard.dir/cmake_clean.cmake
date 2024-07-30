@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksantara_ws/devel/lib/uav_teleop/keyboard"
-  "/home/vtol2022/aksantara_ws/devel/lib/uav_teleop/keyboard.pdb"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/uav_teleop/keyboard"
+  "/home/docker/Aksantara/VTOL24/aksantara_ws/devel/lib/uav_teleop/keyboard.pdb"
   "CMakeFiles/keyboard.dir/src/keyboard.cpp.o"
   "CMakeFiles/keyboard.dir/src/main.cpp.o"
 )

@@ -2713,4 +2713,94 @@ int neutralOpengrab(const uav_msgs::MissionParams &m, ros::NodeHandle &nh){
 }
 
 #endif
+
+//VTOL 24 Funcs  : OrangeGate
+
+// Callback function to handle received messages
+void gateCallback(const std_msgs::Bool::ConstPtr& msg) {
+    if (msg->data) {
+        ROS_INFO("Received True");
+    } else {
+        ROS_INFO("Received False");
+    }
+
+    gate_centered = msg->data;
+}
+
+
+void gateExistCallback(const std_msgs::Bool::ConstPtr& msg) {
+    if (msg->data) {
+        ROS_INFO("Received True");
+    } else {
+        ROS_INFO("Received False");
+    }
+
+    gate_exist = msg->data;
+}
+
+int scanGate(const uav_msgs::MissionParams &m, ros::NodeHandle &nh){
+  /*
+   * scanOrangeGate
+   * Membaca output dari rostopic untuk velocity mavros dari env_percept
+   * Kemudian, mengatur kecepatan sesuai message dari rostopic
+   */
+
+	ros::ServiceClient envClient = nh.serviceClient<uav_msgs::DetectObject>("/odroid/env_percept/detectObject");
+	uav_msgs::DetectObject envSrv;
+	envSrv.request.name = "Gate";
+  
+	uint8_t count = 0;
+  //Try to call Service
+	do {
+		envClient.call(envSrv);
+		count++;
+	} while (!envSrv.response.scanGate && count < config.ints.at("ENV_RETRY_N"));
+	if (!envSrv.response.scanGate) {
+		ROS_FATAL_STREAM("Cannot turn on Gate Service!");
+		return (int) Errors::UNRESPONSIVE_SERVICE;
+	}
+  ROS_INFO_STREAM("--- Scan Gate Started ---");
+  
+  ros::Subscriber gate_sub = nh.subscribe("/odroid/center_gate",10,gateCallback);
+  ros::Subscriber gate_check_sub = nh.subscribe("/odroid/gate_exist",10, gateExistCallback);
+
+  while(!gate_centered){
+    /*
+     * Corner case, semisal fungsi dipanggil tapi gate gk terdeteksi
+     * Pakai mavros velocity untuk mundurin drone 
+     * Untuk tahu engganya ada gate pakai msg 
+     */ 
+    
+    if(!gate_exist){
+
+      ros::Publisher vel_pub = nh.advertise<geometry_msgs::TwistStamped>("/mavros/setpoint_velocity/cmd_vel", 10);
+
+      geometry_msgs::TwistStamped vel_msg;
+
+      vel_msg.header.stamp = ros::Time::now();
+      vel_msg.twist.linear.x = 0.0;
+      vel_msg.twist.linear.y = -0.04;
+      vel_msg.twist.linear.z = 0.0;
+      vel_msg.twist.angular.x = 0.0;
+      vel_msg.twist.angular.y = 0.0;
+      vel_msg.twist.angular.z = 0.0;
+      vel_pub.publish(vel_msg);
+    }
+  }
+
+  ROS_INFO_STREAM("--- Drone Centered ---");
+  //--- Turn Off Service ---
+  count = 0;
+  //Try to Call Service
+	do {
+		envClient.call(envSrv);
+		count++;
+	} while (envSrv.response.scanGate && count < config.ints.at("ENV_RETRY_N"));
+	if (envSrv.response.scanGate) {
+		ROS_FATAL_STREAM("Cannot turn off Gate Service!");
+		return (int) Errors::UNRESPONSIVE_SERVICE;
+	}
+
+}
+
 }

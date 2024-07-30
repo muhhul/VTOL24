@@ -9,6 +9,7 @@
 #include <sensor_msgs/image_encodings.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <std_msgs/Float64.h>
+#include <std_msgs/Bool.h>
 #include <geometry_msgs/Point.h>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -32,7 +33,7 @@
 #include <sensor_msgs/Range.h>
 //#include "env_percept/ImageProcessor_config.hpp"
 #include <uav_msgs/PrecLoit.h>
-
+#include <geometry_msgs/TwistStamped.h>
 
 #define DEBUG_FUNCS     1
 
@@ -62,6 +63,8 @@ class ImageProcessor
 	ros::Publisher detectDz_pub_;
 	ros::Publisher qrPos_pub_;
 	ros::Publisher distX_pub_;
+  ros::Publisher vel_pub;
+  image_transport::Publisher detectGate_pub_;
 
 	static const std::map<std::string,ColorRanges> calibratedColors;
 
@@ -82,6 +85,7 @@ class ImageProcessor
 	bool toggleDZ = false;
 	bool togglePilot = false;
 	bool toggleDistX = false;
+  bool toggleGate = false;
 
 	double pose_x;
 	double pose_y;
@@ -93,6 +97,18 @@ class ImageProcessor
 	void localPosCb(const geometry_msgs::PoseStamped& msg);
 	// void rfCb(const sensor_msgs::Range& msg);
 	void rfCb(const sensor_msgs::Range& msg);
+
+
+  cv::Mat img, img_resized, blurred, morphed, img_hsv, img_thresholded_l, img_thresholded_r, mask;
+  const int lower_h_l = 0, lower_s_l = 203, lower_v_l = 0;
+  const int upper_h_l = 35, upper_s_l = 255, upper_v_l = 255;
+  const int lower_h_r = 126, lower_s_r = 40, lower_v_r = 97;
+  const int upper_h_r = 179, upper_s_r = 255, upper_v_r = 255;
+  const int minArea = 3713; // Filter shapes with small area
+  std::vector<std::vector<cv::Point>> contours;
+  std::vector<cv::Vec4i> hierarchy;
+  const int crosshair_radius = 15;
+  const int lateral_alignment_slope_tolerance = 0.02;
 
 	public:
 	ImageProcessor();
@@ -116,6 +132,7 @@ class ImageProcessor
 
 	void scanDZ(cv::Mat& inputImg);
 	void scanELP(cv::Mat& inputImg);
+  void scanGate(cv::Mat& inputImg);
 
 	std::vector<std::vector<cv::Point>> detectContourELP(cv::Mat inputImg, std::string color);
 	std::vector<std::vector<cv::Point>> detectContourDistX(cv::Mat inputImg, std::string color);
@@ -127,6 +144,18 @@ class ImageProcessor
 	
 	bool isGreen(const cv::Mat image, cv::Rect roi);
 	std::vector<cv::Rect> surroundingArea(cv::Mat image, cv::Rect rect);
+  
+  // VTOL 24 OpenCV 
+  void on_trackbar(int, void*);
+  double find_slope(int x0, int y0, int x1, int y1);
+  void fullLine(cv::Mat img, cv::Point a, cv::Point b, cv::Scalar color);
+  int min_point_y_idx(std::vector<cv::Point> points);
+  cv::Point find_rect_centroid(cv::Mat img, std::vector<cv::Point> largestRectangle);
+  bool gate_align_yaw(cv::Mat img, cv::Point rectCentroid, geometry_msgs::TwistStamped& cmd_vel);
+  bool gate_align_normal(cv::Mat img, cv::Point rectCentroid, geometry_msgs::TwistStamped& cmd_vel);
+  bool gate_align_lateral(cv::Mat img, std::vector<cv::Point> rectangle, geometry_msgs::TwistStamped& cmd_vel);
+  void draw_gridlines(cv::Mat img);
+
 };
 
 }
