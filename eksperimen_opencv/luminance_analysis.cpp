@@ -74,14 +74,14 @@ int main(int argc, char const *argv[])
 
             cv::cvtColor(img, img, cv::COLOR_HSV2BGR);
             cv::cvtColor(mask, mask, cv::COLOR_GRAY2BGR);
-            gate_detection::drawRectangle(img, largestRectangle);
-            gate_detection::draw_rect_centroid(img, largestRectangle);
+            gate_detection::drawRectangle(mask, largestRectangle);
+            gate_detection::draw_rect_centroid(mask, largestRectangle);
 
             std::vector<cv::Mat> hsv_channels;
             cv::split(img, hsv_channels);
 
-            cv::putText(img, std::to_string(meanValRed), cv::Point(10, 20), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(255,255,255), 1, cv::LINE_AA);
-            img_stack.push_back(img);
+            cv::putText(mask, std::to_string(meanValRed), cv::Point(10, 20), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(255,255,255), 1, cv::LINE_AA);
+            img_stack.push_back(mask);
         }
         
         
