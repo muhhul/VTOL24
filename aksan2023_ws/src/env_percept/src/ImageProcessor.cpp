@@ -1071,6 +1071,7 @@ void ImageProcessor::scanGate(cv::Mat& inputImg){
     cv::resize(img, img_resized, cv::Size(new_width, new_height));
 
     cv::GaussianBlur(img_resized, blurred, cv::Size(7, 7), 2);
+	cv::normalize(blurred, blurred, 0, 500, cv::NORM_MINMAX);
     cv::cvtColor(blurred, img_hsv, cv::COLOR_BGR2HSV);
     
     if (img_hsv.empty()){
@@ -1082,17 +1083,18 @@ void ImageProcessor::scanGate(cv::Mat& inputImg){
       mask = img_thresholded_l | img_thresholded_r;
     }
 
-    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
     if(mask.empty()){
       ROS_ERROR("Mask is Empty");
     }
-    else if (kernel.empty()) {
-      ROS_ERROR("Kernel is Empty");
-    }
-    cv::morphologyEx(mask, morphed, cv::MORPH_DILATE, kernel, cv::Point(-1, -1), 1);
+
+    // cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
+    // else if (kernel.empty()) {
+    //   ROS_ERROR("Kernel is Empty");
+    // }
+    // cv::morphologyEx(mask, morphed, cv::MORPH_DILATE, kernel, cv::Point(-1, -1), 1);
 
     // Detect contours
-    cv::findContours(morphed, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+    cv::findContours(mask, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
     // Filter contours to find the rectangle
     std::vector<cv::Point> largestRectangle;
