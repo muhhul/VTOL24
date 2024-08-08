@@ -6,6 +6,9 @@ int lower_h_l = 0, lower_s_l = 154, lower_v_l = 82;
 int upper_h_l = 30, upper_s_l = 255, upper_v_l = 255;
 int lower_h_r = 126, lower_s_r = 40, lower_v_r = 97;
 int upper_h_r = 179, upper_s_r = 255, upper_v_r = 255;
+int normalize_lower = 0;
+int normalize_upper = 500;
+cv::Mat normalized;
 
 std::vector<std::string> video_paths = {
     "assets/gate_asrama_lorong.mp4",
@@ -20,10 +23,11 @@ std::vector<std::string> video_paths = {
 int main(int argc, char const *argv[])
 {
     std::vector<cv::VideoCapture> caps;
-    for (auto path : video_paths)
-    {
-        caps.push_back(cv::VideoCapture(path));
-    }
+    // for (auto path : video_paths)
+    // {
+    //     caps.push_back(cv::VideoCapture(path));
+    // }
+    caps.push_back(cv::VideoCapture("/dev/video2"));
 
     cv::namedWindow("Trackbars", cv::WINDOW_AUTOSIZE);
     cv::createTrackbar("Lower H Left", "Trackbars", &lower_h_l, 179);
@@ -62,12 +66,16 @@ int main(int argc, char const *argv[])
             double meanValRed = gate_detection::meanValueInRedHueRange(img);
             cv::GaussianBlur(img, img, cv::Size(5, 5), 3);
 
+            cv::normalize(img, img, normalize_lower, normalize_upper, cv::NORM_MINMAX);
+
+            normalized = img;
+
             cv::cvtColor(img, img, cv::COLOR_BGR2HSV);
 
             cv::Mat img_thresholded_l, img_thresholded_r;
             cv::inRange(img, cv::Scalar(lower_h_l, lower_s_l, lower_v_l), cv::Scalar(upper_h_l, upper_s_l, upper_v_l), img_thresholded_l);
             cv::inRange(img, cv::Scalar(lower_h_r, lower_s_r, lower_v_r), cv::Scalar(upper_h_r, upper_s_r, upper_v_l), img_thresholded_r);
-            cv::Mat mask = img_thresholded_l | img_thresholded_r;
+            cv::Mat mask = img_thresholded_l | img_thresholded_r
 
             std::vector<cv::Point> largestRectangle;
             gate_detection::findLargestRectangle(mask, largestRectangle, 3000);
@@ -84,9 +92,9 @@ int main(int argc, char const *argv[])
             img_stack.push_back(mask);
         }
         
-        
+        img_stack.push_back(normalized);
 
-        int hstack = 3;
+        int hstack = 1;
         int vstack = (img_stack.size() + hstack - 1) / hstack;
         int frameWidth = img_stack[0].cols;
         int frameHeight = img_stack[0].rows;

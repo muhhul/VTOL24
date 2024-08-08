@@ -35,7 +35,7 @@ void onChange_Canny(int, void*) {
 
 int main(int, char**){
     // Open video file
-    cv::VideoCapture cap("assets/vid_wide_gate.mp4"); // Change to 0 for webcam or provide the path to your video file
+    cv::VideoCapture cap("/dev/video2"); // Change to 0 for webcam or provide the path to your video file
     if (!cap.isOpened()) {
         std::cerr << "Error: Could not open video file or camera!" << std::endl;
         return -1;
@@ -89,8 +89,8 @@ int main(int, char**){
         }
 
         // Resize the image to a smaller size
-        int new_width = img.cols/6; // Adjust the scaling factor as needed
-        int new_height = img.rows/6; // Adjust the scaling factor as needed
+        int new_width = img.cols; // Adjust the scaling factor as needed
+        int new_height = img.rows; // Adjust the scaling factor as needed
         cv::resize(img, img_resized, cv::Size(new_width, new_height));
 
         // IMAGE PREPROCESSING
