@@ -1,14 +1,14 @@
 
 "use strict";
 
-let DetectQR = require('./DetectQR.js')
+let SetCurrent = require('./SetCurrent.js')
 let DetectObject = require('./DetectObject.js')
 let PilotOverride = require('./PilotOverride.js')
-let SetCurrent = require('./SetCurrent.js')
+let DetectQR = require('./DetectQR.js')
 
 module.exports = {
-  DetectQR: DetectQR,
+  SetCurrent: SetCurrent,
   DetectObject: DetectObject,
   PilotOverride: PilotOverride,
-  SetCurrent: SetCurrent,
+  DetectQR: DetectQR,
 };

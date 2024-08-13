@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/env_percept/include/**",
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/gazebo_things/include/**",
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/lidar-preprocessing/include/**",
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_commander/include/**",
+        "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/usb_cam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

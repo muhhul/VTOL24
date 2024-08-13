@@ -67,14 +67,14 @@ set(uav_teleop_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(uav_teleop_SOURCE_PREFIX /home/vtol2022/aksan2023_ws/src/uav_teleop)
-  set(uav_teleop_DEVEL_PREFIX /home/vtol2022/aksan2023_ws/devel)
+  set(uav_teleop_SOURCE_PREFIX /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_teleop)
+  set(uav_teleop_DEVEL_PREFIX /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel)
   set(uav_teleop_INSTALL_PREFIX "")
   set(uav_teleop_PREFIX ${uav_teleop_DEVEL_PREFIX})
 else()
   set(uav_teleop_SOURCE_PREFIX "")
   set(uav_teleop_DEVEL_PREFIX "")
-  set(uav_teleop_INSTALL_PREFIX /home/vtol2022/aksan2023_ws/install)
+  set(uav_teleop_INSTALL_PREFIX /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/install)
   set(uav_teleop_PREFIX ${uav_teleop_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/vtol2022/aksan2023_ws/install/lib;/home/vtol2022/aksantara_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/install/lib;/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

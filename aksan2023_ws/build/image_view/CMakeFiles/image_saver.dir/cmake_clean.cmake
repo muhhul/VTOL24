@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/image_view/image_saver"
-  "/home/vtol2022/aksan2023_ws/devel/lib/image_view/image_saver.pdb"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/image_view/image_saver"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/image_view/image_saver.pdb"
   "CMakeFiles/image_saver.dir/src/nodes/image_saver.cpp.o"
 )
 

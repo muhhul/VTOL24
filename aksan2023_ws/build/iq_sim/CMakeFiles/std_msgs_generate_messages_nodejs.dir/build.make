@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build: std_msgs_generate
 .PHONY : iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 
 iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/vtol2022/aksan2023_ws/build/iq_sim && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/iq_sim && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/vtol2022/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksan2023_ws/src /home/vtol2022/aksan2023_ws/src/iq_sim /home/vtol2022/aksan2023_ws/build /home/vtol2022/aksan2023_ws/build/iq_sim /home/vtol2022/aksan2023_ws/build/iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/iq_sim /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/iq_sim /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : iq_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

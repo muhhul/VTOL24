@@ -221,51 +221,51 @@ void keyUpCb(const uav_teleop::Key msg)
 
 bool fsTrigger()
 {
-    #if FS_ALT_CHECK
+//     #if FS_ALT_CHECK
 
-    double relAlt;
-    double relKanan;
+//     double relAlt;
+//     double relKanan;
 
-    #if FS_ALT_SOURCE == 1
-    auto relAltPtr = ros::topic::waitForMessage<geometry_msgs::PoseStamped>(
-        "/mavros/local_position/pose", ros::Duration(WAIT_MSG_TIMEOUT));
+//     #if FS_ALT_SOURCE == 1
+//     auto relAltPtr = ros::topic::waitForMessage<geometry_msgs::PoseStamped>(
+//         "/mavros/local_position/pose", ros::Duration(WAIT_MSG_TIMEOUT));
 
-    #elif FS_ALT_SOURCE == 2
-    auto relAltPtr = ros::topic::waitForMessage<sensor_msgs::Range>(
-        "/mavros/distance_sensor/rangefinder_pub", ros::Duration(WAIT_MSG_TIMEOUT));
-    #endif
+//     #elif FS_ALT_SOURCE == 2
+//     auto relAltPtr = ros::topic::waitForMessage<sensor_msgs::Range>(
+//         "/mavros/distance_sensor/rangefinder_pub", ros::Duration(WAIT_MSG_TIMEOUT));
+//     #endif
 
-    if (relAltPtr == NULL) {
-        ROS_FATAL_STREAM("CANNOT GET ALTITUDE DATA!");
-        return true; 
-    }
+//     if (relAltPtr == NULL) {
+//         ROS_FATAL_STREAM("CANNOT GET ALTITUDE DATA!");
+//         return true; 
+//     }
 
-    #if FS_ALT_SOURCE == 1
-    relAlt = relAltPtr->pose.position.z;
+//     #if FS_ALT_SOURCE == 1
+//     relAlt = relAltPtr->pose.position.z;
 
-    #elif FS_ALT_SOURCE == 2
-    relAlt = relAltPtr->range;
-    #endif
+//     #elif FS_ALT_SOURCE == 2
+//     relAlt = relAltPtr->range;
+//     #endif
     
-//    #if GAZEBO_TEST == 1
-//    auto relKananPtr = ros::topic::waitForMessage<sensor_msgs::Range>(
-//        "/gazebo_things/rf_kanan", ros::Duration(WAIT_MSG_TIMEOUT));
-//    relKanan = relKananPtr->range;
-//    #endif
+// //    #if GAZEBO_TEST == 1
+// //    auto relKananPtr = ros::topic::waitForMessage<sensor_msgs::Range>(
+// //        "/gazebo_things/rf_kanan", ros::Duration(WAIT_MSG_TIMEOUT));
+// //    relKanan = relKananPtr->range;
+// //    #endif
 
-    if (relAlt > FS_MAX_ALT) {
-        ROS_FATAL_STREAM("Maximum altitude reached. Alt: " << relAlt);
-        return true;
-    }
+//     if (relAlt > FS_MAX_ALT) {
+//         ROS_FATAL_STREAM("Maximum altitude reached. Alt: " << relAlt);
+//         return true;
+//     }
     
-//    if (relKanan < FS_MAX_KANAN) {
-//        ROS_FATAL_STREAM("Maximum kanan reached. Kanan: " << relKanan);        
-//        return true;
-//    }
+// //    if (relKanan < FS_MAX_KANAN) {
+// //        ROS_FATAL_STREAM("Maximum kanan reached. Kanan: " << relKanan);        
+// //        return true;
+// //    }
 
-    return false;
+//     return false;
 
-    #endif
+//     #endif
     
     return false;
 }
@@ -288,30 +288,30 @@ bool rcPWM(int val, const std::string &want)
 
 int rcTrigger()
 {
-    #if RC_CHECK == 1
-    auto rcInPtr = ros::topic::waitForMessage<mavros_msgs::RCIn>("/mavros/rc/in", 
-        ros::Duration(WAIT_MSG_TIMEOUT));
-    if (rcInPtr == NULL) {
-        ROS_FATAL_STREAM("Is RC connected?");
-        return 0;
-    }
+    // #if RC_CHECK == 1
+    // auto rcInPtr = ros::topic::waitForMessage<mavros_msgs::RCIn>("/mavros/rc/in", 
+    //     ros::Duration(WAIT_MSG_TIMEOUT));
+    // if (rcInPtr == NULL) {
+    //     ROS_FATAL_STREAM("Is RC connected?");
+    //     return 0;
+    // }
 
-    if (rcPWM(rcInPtr->channels.at(RC_N_LAND-1), RC_LAND_PWM)) {
-        ROS_ERROR("RC LAND TRIGGERED");
-        return 1;
-    }
-    if (rcPWM(rcInPtr->channels.at(RC_N_STAB-1), RC_STAB_PWM)) {
-        ROS_ERROR("RC STABILIZE TRIGGERED");
-        return 2;
-    }
-    if (rcPWM(rcInPtr->channels.at(RC_N_EMERGENCY_STOP_MOTOR-1), RC_STAB_EMERGENCY_STOP_MOTOR)) {
-	ROS_ERROR("RC EMERGENCY STOP MOTOR TRIGGERED");
-	return 3;
-    }    
+    // if (rcPWM(rcInPtr->channels.at(RC_N_LAND-1), RC_LAND_PWM)) {
+    //     ROS_ERROR("RC LAND TRIGGERED");
+    //     return 1;
+    // }
+    // if (rcPWM(rcInPtr->channels.at(RC_N_STAB-1), RC_STAB_PWM)) {
+    //     ROS_ERROR("RC STABILIZE TRIGGERED");
+    //     return 2;
+    // }
+    // if (rcPWM(rcInPtr->channels.at(RC_N_EMERGENCY_STOP_MOTOR-1), RC_STAB_EMERGENCY_STOP_MOTOR)) {
+	// ROS_ERROR("RC EMERGENCY STOP MOTOR TRIGGERED");
+	// return 3;
+    // }    
 
-    #endif
+    // #endif
 
-    return 0;
+    // return 0;
 }
 
 bool checkPilot()

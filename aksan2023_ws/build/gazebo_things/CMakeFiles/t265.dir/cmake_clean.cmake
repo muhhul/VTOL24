@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/gazebo_things/t265"
-  "/home/vtol2022/aksan2023_ws/devel/lib/gazebo_things/t265.pdb"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/gazebo_things/t265"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/gazebo_things/t265.pdb"
   "CMakeFiles/t265.dir/src/fake_rf.cpp.o"
   "CMakeFiles/t265.dir/src/main.cpp.o"
   "CMakeFiles/t265.dir/src/t265.cpp.o"

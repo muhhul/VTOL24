@@ -1,2 +1,2 @@
-env_percept:gazebo_things:image_view:iq_sim:lidar-preprocessing:uav_commander:uav_msgs:uav_teleop:video_stream_opencv:vision_to_mavros
--DCATKIN_DEVEL_PREFIX=/home/vtol2022/aksan2023_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vtol2022/aksan2023_ws/install -G Unix Makefiles
+env_percept:gazebo_things:image_view:iq_sim:lidar-preprocessing:uav_commander:uav_msgs:uav_teleop:usb_cam:video_stream_opencv:vision_to_mavros
+-DCATKIN_DEVEL_PREFIX=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/install -G Unix Makefiles

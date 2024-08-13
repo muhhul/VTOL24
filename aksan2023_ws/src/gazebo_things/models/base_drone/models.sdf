@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="my_drone">
+    <static>false</static>
+    <link name="base_link">
+      <pose>0 0 0.5 0 0 0</pose>
+      <visual name="body_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="body_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <!-- Camera sensor definition -->
+      <sensor name="front_camera" type="camera">
+        <always_on>true</always_on>
+        <update_rate>30.0</update_rate>
+        <camera>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100.0</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>front_camera</cameraName>
+          <imageTopicName>/camera/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/camera_info</cameraInfoTopicName>
+          <frameName>camera_link</frameName>
+        </plugin>
+      </sensor>
+    </link>
+  </model>
+</sdf>

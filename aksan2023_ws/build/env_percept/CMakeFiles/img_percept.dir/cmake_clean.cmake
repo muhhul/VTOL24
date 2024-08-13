@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/libimg_percept.pdb"
-  "/home/vtol2022/aksan2023_ws/devel/lib/libimg_percept.so"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/libimg_percept.pdb"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/libimg_percept.so"
   "CMakeFiles/img_percept.dir/src/ImageProcessor.cpp.o"
 )
 

@@ -43,87 +43,87 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build
 
 # Utility rule file for uav_msgs_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/progress.make
 
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/MissionParams.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLand.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DzPosition.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h
-uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/MissionParams.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLand.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DzPosition.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h
+uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h
 
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from uav_msgs/MissionParams.msg"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/MissionParams.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from uav_msgs/MissionParams.msg"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/MissionParams.msg -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from uav_msgs/PrecLand.msg"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLand.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from uav_msgs/PrecLand.msg"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLand.msg -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from uav_msgs/DzPosition.msg"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DzPosition.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from uav_msgs/DzPosition.msg"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/DzPosition.msg -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from uav_msgs/PrecLoit.msg"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from uav_msgs/PrecLoit.msg"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg/PrecLoit.msg -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from uav_msgs/PilotOverride.srv"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from uav_msgs/PilotOverride.srv"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/PilotOverride.srv -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from uav_msgs/DetectQR.srv"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from uav_msgs/DetectQR.srv"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectQR.srv -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from uav_msgs/DetectObject.srv"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from uav_msgs/DetectObject.srv"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/DetectObject.srv -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vtol2022/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from uav_msgs/SetCurrent.srv"
-	cd /home/vtol2022/aksan2023_ws/src/uav_msgs && /home/vtol2022/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/vtol2022/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv -Iuav_msgs:/home/vtol2022/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/vtol2022/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from uav_msgs/SetCurrent.srv"
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs && /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/srv/SetCurrent.srv -Iuav_msgs:/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs/msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p uav_msgs -o /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 uav_msgs_generate_messages_cpp: uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/MissionParams.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLand.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DzPosition.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectQR.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/DetectObject.h
-uav_msgs_generate_messages_cpp: /home/vtol2022/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/MissionParams.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLand.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DzPosition.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PrecLoit.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/PilotOverride.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectQR.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/DetectObject.h
+uav_msgs_generate_messages_cpp: /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/include/uav_msgs/SetCurrent.h
 uav_msgs_generate_messages_cpp: uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/build.make
 
 .PHONY : uav_msgs_generate_messages_cpp
@@ -134,10 +134,10 @@ uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/build: uav_msgs_generate_
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/build
 
 uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/clean:
-	cd /home/vtol2022/aksan2023_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/uav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/uav_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/clean
 
 uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/depend:
-	cd /home/vtol2022/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksan2023_ws/src /home/vtol2022/aksan2023_ws/src/uav_msgs /home/vtol2022/aksan2023_ws/build /home/vtol2022/aksan2023_ws/build/uav_msgs /home/vtol2022/aksan2023_ws/build/uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/uav_msgs /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/uav_msgs /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : uav_msgs/CMakeFiles/uav_msgs_generate_messages_cpp.dir/depend
 

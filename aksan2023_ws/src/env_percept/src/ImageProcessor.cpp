@@ -1,5 +1,5 @@
 #include <env_percept/ImageProcessor.hpp>
-
+#define GAZEBO_MODE 1
 
 namespace env_percept {
 
@@ -19,28 +19,25 @@ ImageProcessor::ImageProcessor() : it_(nh_)
 	// Subscribe to input video feed and publish output video feed
 	// TODO : use output video only for debugging, remove when deploying 
 	// WARN : too much global namespace resolution
-
 	
-	front_image_sub_ = it_.subscribe("/front_cam/image_raw", 1, &ImageProcessor::frontImageCb, this);
-
-	down_image_sub_ = it_.subscribe("/usb_cam/image_rect_color", 1, &ImageProcessor::downImageCb, this);
-	
-	/*
-	//#if DEBUG_FUNCS
+  #if GAZEBO_MODE
 	front_image_sub_ = it_.subscribe("/logitech/webcam/webcam_image_raw", 1, &ImageProcessor::frontImageCb, this); // for gazebo
-
 	down_image_sub_ = it_.subscribe("/logitech/fisheye/fisheye_image_raw", 1, &ImageProcessor::downImageCb, this); // for gazebo
-	//#endif
-	*/
+  ROS_INFO_STREAM("Gazebo Mode");
+  
+  #else 
+	front_image_sub_ = it_.subscribe("/front_cam/image_raw", 1, &ImageProcessor::frontImageCb, this);
+	down_image_sub_ = it_.subscribe("/usb_cam/image_rect_color", 1, &ImageProcessor::downImageCb, this);
+  ROS_INFO_STREAM("Not Gazebo Mode");
+	#endif
 
 	local_position_sub = nh_.subscribe("/mavros/local_position/pose", 1, &ImageProcessor::localPosCb, this);
-	rf_sub = nh_.subscribe("/mavros/distance_sensor/rangefinder_pub", 1, &ImageProcessor::rfCb, this);
 	
-	/*
-	#if DEBUG_FUNCS
+  #ifdef GAZEBO_MODE
 	rf_sub = nh_.subscribe("/gazebo_things/rf_bawah", 1, &ImageProcessor::rfCb, this);
+  #else 
+  rf_sub = nh_.subscribe("/mavros/distance_sensor/rangefinder_pub", 1, &ImageProcessor::rfCb, this);
 	#endif 
-	*/
 
 	front_image_pub_ = it_.advertise("image_percept/front_image/output_video", 1);
 	down_image_pub_ = it_.advertise("image_percept/down_image/output_video", 1);
@@ -58,6 +55,9 @@ ImageProcessor::ImageProcessor() : it_(nh_)
 
 	// distX_pub_ = nh_.advertise<std_msgs::Float64>("image_percept/distX", 1);
 	distX_pub_ = nh_.advertise<uav_msgs::PrecLoit>("image_percept/distX", 1);
+
+  //detectGate_pub_ = it_.advertise("image_percept/detect_gate/output_video",1); 
+
 }
 
 
@@ -86,11 +86,10 @@ void ImageProcessor::downImageCb(const sensor_msgs::ImageConstPtr& msg) {
 	}
 	catch (cv_bridge::Exception& e) {
 		ROS_ERROR("cv_bridge exception: %s", e.what());
-		return;
+    return;
 	}
-
+  
 	cv_ptr->image.copyTo(downHandledImage);
-
 }
 
 
@@ -119,9 +118,6 @@ void ImageProcessor::publishAll()
 	if (toggleQR) {
 //		ROS_DEBUG("Good, now try to decode");
 		decode(frontHandledImage, decodedObjects);
-		#if DEBUG_FUNCS
-			display(frontHandledImage, decodedObjects);
-		#endif
 	}
 
 	if (toggleELP) {
@@ -139,6 +135,10 @@ void ImageProcessor::publishAll()
 	if (toggleDistX) {
 		getDistX(downHandledImage);
 	}
+  
+  if (toggleGate){
+    scanGate(frontHandledImage);
+  }
 
 	sensor_msgs::ImagePtr front_msg_out = cv_bridge::CvImage(std_msgs::Header(), "bgr8", frontHandledImage).toImageMsg();
 	front_image_pub_.publish(front_msg_out);
@@ -147,7 +147,6 @@ void ImageProcessor::publishAll()
 	down_image_pub_.publish(down_msg_out);
 
 }
-
 
 bool ImageProcessor::scanQR(uav_msgs::DetectQR::Request &req, uav_msgs::DetectQR::Response &res)
 {
@@ -234,6 +233,19 @@ bool ImageProcessor::scanObject(uav_msgs::DetectObject::Request &req, uav_msgs::
 			res.scanDistX = false;
 		}
 	}
+  else if(req.name == "Gate"){
+    if(toggleGate == false){
+      ROS_INFO("---Scanning Gate ---");
+      toggleGate = true;
+      res.scanGate = true;
+    }
+    else{
+      ROS_INFO("---Scan Gate is DONE---");
+      toggleGate = false;
+      res.scanGate = false;
+      cv::destroyAllWindows();
+    }
+  }
 	
 	return true;
 }
@@ -875,6 +887,274 @@ std::vector<cv::Rect> ImageProcessor::surroundingArea (cv::Mat image, cv::Rect r
     return surrounding;
 }
 
+// VTOL 24
+  
+// OpenCV Function 
+  
+void ImageProcessor::on_trackbar(int, void*) {
+    if (img_hsv.empty()){
+      ROS_WARN_STREAM("Img_HSV Empty");
+      return; // Check if img_hsv is empty
+    }
+    cv::inRange(img_hsv, cv::Scalar(lower_h_l, lower_s_l, lower_v_l), cv::Scalar(upper_h_l, upper_s_l, upper_v_l), img_thresholded_l);
+    cv::inRange(img_hsv, cv::Scalar(lower_h_r, lower_s_r, lower_v_r), cv::Scalar(upper_h_r, upper_s_r, upper_v_l), img_thresholded_r);
+    mask = img_thresholded_l | img_thresholded_r;
+    cv::imshow("Thresholded Image", mask);
+}
 
+double ImageProcessor::find_slope(int x0, int y0, int x1, int y1){
+     return (double) (y1-y0)/(x1-x0);
+}
+
+void ImageProcessor::fullLine(cv::Mat img, cv::Point a, cv::Point b, cv::Scalar color){
+     double slope = find_slope(a.x, a.y, b.x, b.y);
+
+     cv::Point p(0,0), q(img.cols,img.rows);
+
+     p.y = -(a.x - p.x) * slope + a.y;
+     q.y = -(b.x - q.x) * slope + b.y;
+
+     line(img,p,q,color,1,8,0);
+}
+
+
+int ImageProcessor::min_point_y_idx(std::vector<cv::Point> points)
+{
+    int min_y_idx = 0;
+    if (points.size() > 1)
+    {
+        for (int i = 1; i < points.size(); i++)
+            if (points[i].y < points[min_y_idx].y) min_y_idx = i;
+    }
+    return min_y_idx;
+}
+
+cv::Point ImageProcessor::find_rect_centroid(cv::Mat img, std::vector<cv::Point> largestRectangle)
+{
+    // Draw the diagonal lines
+    cv::line(img, largestRectangle[0], largestRectangle[2], cv::Scalar(255, 0, 0), 2);
+    cv::line(img, largestRectangle[1], largestRectangle[3], cv::Scalar(255, 0, 0), 2);
+
+    // Calculate and return the center point
+    cv::Point rectCentroid((largestRectangle[0].x + largestRectangle[2].x) / 2, (largestRectangle[0].y + largestRectangle[2].y) / 2);
+
+    // Draw the center point
+    cv::circle(img, rectCentroid, 5, cv::Scalar(0, 0, 255), -1);
+    std::cout << "Rectangle center: " << rectCentroid << std::endl;
+
+    return rectCentroid;
+}
+
+bool ImageProcessor::gate_align_normal(cv::Mat img, cv::Point rectCentroid, geometry_msgs::TwistStamped& cmd_vel)
+{
+    int img_center_y = img.rows / 2;
+    if (rectCentroid.y < img_center_y - crosshair_radius)
+    {
+      std::cout << "MOVE NORMAL UP" << std::endl;
+      cmd_vel.twist.linear.z = 0.03;
+    }
+    else if (rectCentroid.y > img_center_y + crosshair_radius)
+    {
+      std::cout << "MOVE NORMAL DOWN" << std::endl;
+      cmd_vel.twist.linear.z = -0.03;
+    }
+    else 
+    {
+      std::cout << "NORMAL CENTERED" << std::endl;
+      cmd_vel.twist.linear.z = 0;
+      return true;
+    }
+
+    return false; 
+}
+
+bool ImageProcessor::gate_align_yaw(cv::Mat img, cv::Point rectCentroid, geometry_msgs::TwistStamped& cmd_vel)
+{
+    int img_center_x = img.cols / 2;
+    if (rectCentroid.x < img_center_x - crosshair_radius)
+    {
+        std::cout << "ROTATE YAW LEFT" << std::endl;
+        cmd_vel.twist.linear.x = -0.03;
+    }
+    else if (rectCentroid.x > img_center_x + crosshair_radius)
+    {
+        std::cout << "ROTATE YAW RIGHT" << std::endl;
+        cmd_vel.twist.linear.x = 0.03;
+    }
+    else 
+    {
+        std::cout << "YAW CENTERED" << std::endl;
+        cmd_vel.twist.linear.x = 0;
+        return true; 
+    }
+
+    return false;
+}
+
+bool ImageProcessor::gate_align_lateral(cv::Mat img, std::vector<cv::Point> rectangle, geometry_msgs::TwistStamped& cmd_vel)
+{
+    // Find top and botom points
+    cv::Point top_a, top_b;
+    top_a = rectangle[min_point_y_idx(rectangle)];
+    rectangle.erase(rectangle.begin() + min_point_y_idx(rectangle));
+    top_b = rectangle[min_point_y_idx(rectangle)];
+    rectangle.erase(rectangle.begin() + min_point_y_idx(rectangle));
+
+    // Draw perspective lines
+    fullLine(img, top_a, top_b, cv::Scalar(0, 0, 255));
+    fullLine(img, rectangle[0], rectangle[1], cv::Scalar(0, 0, 255));
+
+    // Find top and bottom line slopes
+    double top_slope = find_slope(top_a.x, top_a.y, top_b.x, top_b.y);
+    double bottom_slope = find_slope(rectangle[0].x, rectangle[0].y, rectangle[1].x, rectangle[1].y);
+    std::cout << "top slope: " << top_slope << std::endl << "bottom slope: " << bottom_slope << std::endl;
+
+    // Move in lateral direction
+    if (top_slope > lateral_alignment_slope_tolerance && bottom_slope < -lateral_alignment_slope_tolerance)
+    {
+        std::cout << "MOVE LATERAL LEFT" << std::endl;
+
+    }
+    else if (top_slope < -lateral_alignment_slope_tolerance && bottom_slope > lateral_alignment_slope_tolerance)
+    {
+        std::cout << "MOVE LATERAL RIGHT" << std::endl;
+    }
+    else 
+    {
+        std::cout << "LATERAL CENTERED" << std::endl;
+        return true; 
+    }
+    return false; 
+}
+
+void ImageProcessor::draw_gridlines(cv::Mat img)
+{
+    line(img, cv::Point(0, img.rows / 2), cv::Point(img.cols, img.rows / 2), cv::Scalar(255,255,255));
+    line(img, cv::Point(img.cols / 2, 0), cv::Point(img.cols / 2, img.rows), cv::Scalar(255,255,255));
+}
+  
+void ImageProcessor::scanGate(cv::Mat& inputImg){
+    ros::NodeHandle vel_node; 
+    ros::NodeHandle new_node;
+    // Init vel_pub x,y,z = 0
+    ros::Publisher vel_pub = vel_node.advertise<geometry_msgs::TwistStamped>("/mavros/setpoint_velocity/cmd_vel", 10);
+
+    geometry_msgs::TwistStamped vel_msg;
+
+    vel_msg.header.stamp = ros::Time::now();
+    vel_msg.twist.linear.x = 0.0;
+    vel_msg.twist.linear.y = 0.0;
+    vel_msg.twist.linear.z = 0.0;
+    vel_msg.twist.angular.x = 0.0;
+    vel_msg.twist.angular.y = 0.0;
+    vel_msg.twist.angular.z = 0.0;
+
+    bool yaw_centered = false, normal_centered = false, lateral_centered = false; 
+    // Create a ROS publisher
+    ros::Publisher bool_pub = new_node.advertise<std_msgs::Bool>("center_gate", 10);
+    ros::Publisher gateExist_pub = new_node.advertise<std_msgs::Bool>("gate_exist", 10);
+
+    // Create a message object
+    std_msgs::Bool drone_centered, gate_exist;
+    drone_centered.data = false; 
+    gate_exist.data = false;
+    
+    cv::Mat img = inputImg.clone(); 
+
+    if(img.empty()){
+      ROS_ERROR("Image Empty in scanGate");
+    }
+    
+    // Resize the image to a smaller size
+    int new_width = img.cols / 1; // Adjust the scaling factor as needed
+    int new_height = img.rows / 1; // Adjust the scaling factor as needed
+    cv::resize(img, img_resized, cv::Size(new_width, new_height));
+
+    cv::GaussianBlur(img_resized, blurred, cv::Size(7, 7), 2);
+	cv::normalize(blurred, blurred, 0, 500, cv::NORM_MINMAX);
+    cv::cvtColor(blurred, img_hsv, cv::COLOR_BGR2HSV);
+    
+    if (img_hsv.empty()){
+      ROS_WARN_STREAM("Img_HSV Empty");
+    }
+    else{
+      cv::inRange(img_hsv, cv::Scalar(lower_h_l, lower_s_l, lower_v_l), cv::Scalar(upper_h_l, upper_s_l, upper_v_l), img_thresholded_l);
+      cv::inRange(img_hsv, cv::Scalar(lower_h_r, lower_s_r, lower_v_r), cv::Scalar(upper_h_r, upper_s_r, upper_v_l), img_thresholded_r);
+      mask = img_thresholded_l | img_thresholded_r;
+    }
+
+    if(mask.empty()){
+      ROS_ERROR("Mask is Empty");
+    }
+
+    // cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
+    // else if (kernel.empty()) {
+    //   ROS_ERROR("Kernel is Empty");
+    // }
+    // cv::morphologyEx(mask, morphed, cv::MORPH_DILATE, kernel, cv::Point(-1, -1), 1);
+
+    // Detect contours
+    cv::findContours(mask, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+
+    // Filter contours to find the rectangle
+    std::vector<cv::Point> largestRectangle;
+    double maxArea = 0;
+    for (size_t i = 0; i < contours.size(); ++i) {
+        std::vector<cv::Point> contour_poly;
+        cv::approxPolyDP(contours[i], contour_poly, 0.02 * cv::arcLength(contours[i], true), true);
+
+        if (contour_poly.size() == 4 && cv::isContourConvex(contour_poly)) {
+            double area = cv::contourArea(contour_poly);
+            if (area > maxArea && area > minArea) {
+                maxArea = area;
+                largestRectangle = contour_poly;
+            }
+        }
+    }
+
+    if (!largestRectangle.empty()) {
+        // Draw the rectangle
+        for (size_t i = 0; i < largestRectangle.size(); i++) {
+            cv::line(img_resized, largestRectangle[i], largestRectangle[(i + 1) % largestRectangle.size()], cv::Scalar(0, 255, 0), 3);
+        }
+
+        draw_gridlines(img_resized);
+        cv::circle(img_resized, cv::Point(img_resized.cols / 2, img_resized.rows / 2), crosshair_radius, cv::Scalar(255, 255, 255));
+
+        cv::Point rectCentroid = find_rect_centroid(img_resized, largestRectangle);
+        normal_centered = gate_align_normal(img_resized, rectCentroid, vel_msg);
+        yaw_centered = gate_align_yaw(img_resized, rectCentroid, vel_msg);
+        lateral_centered = gate_align_lateral(img_resized, largestRectangle, vel_msg);
+
+        std::cout << "================" << std::endl;
+        
+        if(yaw_centered && normal_centered){
+          drone_centered.data = true;
+        }
+        gate_exist.data = true;
+    }
+    else{
+      gate_exist.data = false;
+    }
+
+
+    // Publish the message
+    bool_pub.publish(drone_centered);
+    vel_pub.publish(vel_msg);
+    gateExist_pub.publish(gate_exist);
+
+    // Display the result
+    cv::Mat gray;
+    cv::cvtColor(blurred, gray, cv::COLOR_BGR2GRAY);
+    //cv::imshow("Gray", gray);
+    cv::imshow("Detected Rectangle", img_resized);
+
+    // Update GUI Window
+    //cv::imshow(OPENCV_WINDOW, cv_ptr->image);
+    cv::waitKey(3);
+
+    // Output modified video stream
+    //detectGate_pub_.publish(cv_ptr->toImageMsg());
+}
 
 }

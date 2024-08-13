@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build
 
 # Utility rule file for geographic_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build: 
 .PHONY : lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
 
 lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean:
-	cd /home/vtol2022/aksan2023_ws/build/lidar-preprocessing && $(CMAKE_COMMAND) -P CMakeFiles/geographic_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/lidar-preprocessing && $(CMAKE_COMMAND) -P CMakeFiles/geographic_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
 
 lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend:
-	cd /home/vtol2022/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksan2023_ws/src /home/vtol2022/aksan2023_ws/src/lidar-preprocessing /home/vtol2022/aksan2023_ws/build /home/vtol2022/aksan2023_ws/build/lidar-preprocessing /home/vtol2022/aksan2023_ws/build/lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/lidar-preprocessing /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/lidar-preprocessing /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lidar-preprocessing/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend
 

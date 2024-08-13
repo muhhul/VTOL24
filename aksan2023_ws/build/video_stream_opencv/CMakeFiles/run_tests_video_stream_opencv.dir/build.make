@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build
 
 # Utility rule file for run_tests_video_stream_opencv.
 
@@ -63,10 +63,10 @@ video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/build: run_test
 .PHONY : video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/build
 
 video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/clean:
-	cd /home/vtol2022/aksan2023_ws/build/video_stream_opencv && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_video_stream_opencv.dir/cmake_clean.cmake
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/video_stream_opencv && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_video_stream_opencv.dir/cmake_clean.cmake
 .PHONY : video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/clean
 
 video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/depend:
-	cd /home/vtol2022/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vtol2022/aksan2023_ws/src /home/vtol2022/aksan2023_ws/src/video_stream_opencv /home/vtol2022/aksan2023_ws/build /home/vtol2022/aksan2023_ws/build/video_stream_opencv /home/vtol2022/aksan2023_ws/build/video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src/video_stream_opencv /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/video_stream_opencv /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : video_stream_opencv/CMakeFiles/run_tests_video_stream_opencv.dir/depend
 

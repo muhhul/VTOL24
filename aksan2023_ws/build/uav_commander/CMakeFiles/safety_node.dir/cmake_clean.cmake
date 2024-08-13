@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/safety_node"
-  "/home/vtol2022/aksan2023_ws/devel/lib/uav_commander/safety_node.pdb"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/uav_commander/safety_node"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/uav_commander/safety_node.pdb"
   "CMakeFiles/safety_node.dir/src/uav_commander/safety_node.cpp.o"
 )
 

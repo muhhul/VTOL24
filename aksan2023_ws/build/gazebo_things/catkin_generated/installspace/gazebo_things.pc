@@ -1,4 +1,4 @@
-prefix=/home/vtol2022/aksan2023_ws/install
+prefix=/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/install
 
 Name: gazebo_things
 Description: Description of gazebo_things

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vtol2022/aksan2023_ws/src
+CMAKE_SOURCE_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vtol2022/aksan2023_ws/build
+CMAKE_BINARY_DIR = /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vtol2022/aksan2023_ws/build/CMakeFiles /home/vtol2022/aksan2023_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vtol2022/aksan2023_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2209,6 +2209,32 @@ uav_missions_utils/fast:
 .PHONY : uav_missions_utils/fast
 
 #=============================================================================
+# Target rules for targets named usb_cam_node
+
+# Build rule for target.
+usb_cam_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam_node
+.PHONY : usb_cam_node
+
+# fast build rule for target.
+usb_cam_node/fast:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/build
+.PHONY : usb_cam_node/fast
+
+#=============================================================================
+# Target rules for targets named usb_cam
+
+# Build rule for target.
+usb_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam
+.PHONY : usb_cam
+
+# fast build rule for target.
+usb_cam/fast:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/build
+.PHONY : usb_cam/fast
+
+#=============================================================================
 # Target rules for targets named run_tests_video_stream_opencv_rostest_test_test_rtsp_stream.test
 
 # Build rule for target.
@@ -2599,6 +2625,8 @@ help:
 	@echo "... pilot"
 	@echo "... uav_missions"
 	@echo "... uav_missions_utils"
+	@echo "... usb_cam_node"
+	@echo "... usb_cam"
 	@echo "... run_tests_video_stream_opencv_rostest_test_test_rtsp_stream.test"
 	@echo "... video_stream_opencv_gencfg"
 	@echo "... small.mp4"

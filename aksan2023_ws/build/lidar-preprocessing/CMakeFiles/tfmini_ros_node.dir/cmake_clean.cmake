@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vtol2022/aksan2023_ws/devel/lib/tfmini_ros/tfmini_ros_node"
-  "/home/vtol2022/aksan2023_ws/devel/lib/tfmini_ros/tfmini_ros_node.pdb"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/tfmini_ros/tfmini_ros_node"
+  "/home/zulfan/Documents/VTOL/VTOL24/aksan2023_ws/devel/lib/tfmini_ros/tfmini_ros_node.pdb"
   "CMakeFiles/tfmini_ros_node.dir/src/TFmini.cpp.o"
   "CMakeFiles/tfmini_ros_node.dir/src/TFmini_ros_node.cpp.o"
 )

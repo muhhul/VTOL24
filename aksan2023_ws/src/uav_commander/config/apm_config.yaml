@@ -143,22 +143,22 @@ distance_sensor:
 #    id: 0
 #    orientation: PITCH_270  # only that orientation are supported by APM 3.4+
   rangefinder_pub:
-    id: 0
+    id: 4
     frame_id: "lidarArkflow"
 #    orientation: PITCH_270
     field_of_view: 0.1082
   lidar_depan_pub:
-    id: 2
+    id: 0
     frame_id: "lidardepan"
     field_of_view: 0.013
     send_tf: false
   lidar_kanan_pub:
-    id: 3
+    id: 12
     frame_id: "lidarkanan"
     field_of_view: 0.013
     send_tf: false
   lidar_kiri_pub:
-    id: 1
+    id: 16
     frame_id: "lidarkiri"
     field_of_view: 0.013
     send_tf: false

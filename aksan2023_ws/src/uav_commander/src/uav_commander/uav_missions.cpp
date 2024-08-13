@@ -17,7 +17,7 @@ int armThrottle(const uav_msgs::MissionParams &m, ros::NodeHandle &nh)
 	// The only way to exit this loop with no error is when curr_state.armed = true
 	uint8_t count = 0;
 	do {
-		count++;
+		count++; 
 		if (count > config.ints.at("SERVICE_RETRY_N")) {
 			ROS_FATAL("---Arming failed---");
 			return (int) Errors::UNRESPONSIVE_SERVICE;
@@ -323,6 +323,11 @@ int stop(const uav_msgs::MissionParams &m, ros::NodeHandle &nh){
 
 	return (int) Errors::NO_ERROR;
 }
+
+// int orangeGate()
+// {
+
+// }
 
 
 #if DEBUG_FUNCS
